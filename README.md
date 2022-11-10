@@ -85,7 +85,7 @@ Add these methods into AppDelegate to save and update contacts through notificat
 <p align="center"><img src="https://raw.githubusercontent.com/RingerInteractive/Ringer-SDK-Sample-App-IOS/master/notification.jpg" width="400" alt="on top"></p>
 
 3. Main Screen
-<p align="center"><img src="https://raw.githubusercontent.com/RingerInteractive/Ringer-SDK-Sample-App-IOS/master/main/home_screen.jpg" width="400" alt="on top"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/RingerInteractive/Ringer-SDK-Sample-App-IOS/master/home_screen.jpg" width="400" alt="on top"></p>
 
 4. Full screen call
 <p align="center"><img src="https://raw.githubusercontent.com/RingerInteractive/Ringer-SDK-Sample-App-IOS/master/app_setting.jpg" width="400" alt="on top"></p>
