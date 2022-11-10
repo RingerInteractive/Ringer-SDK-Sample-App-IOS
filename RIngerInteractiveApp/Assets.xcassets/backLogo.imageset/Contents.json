@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Ringer-Logo-2 colors.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

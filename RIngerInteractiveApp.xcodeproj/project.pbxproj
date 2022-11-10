@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA6FF3AA291D4DF30097C383 /* Pods_RIngerInteractiveApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F37F867FBFB413193A602D /* Pods_RIngerInteractiveApp.framework */; };
+		CA6FF3AD291D572A0097C383 /* RingerInteractive.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6FF3AC291D57290097C383 /* RingerInteractive.xcframework */; };
+		CAA85AF729194E2200AD4DBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA85AF529194E2200AD4DBD /* AppDelegate.swift */; };
+		CAA85AF829194E2200AD4DBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAA85AF629194E2200AD4DBD /* Assets.xcassets */; };
+		CAE8B5AB28C83C38007B9226 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5AA28C83C38007B9226 /* SceneDelegate.swift */; };
+		CAE8B5BE28C83C70007B9226 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE8B5BC28C83C70007B9226 /* LaunchScreen.storyboard */; };
+		CAE8B5BF28C83C70007B9226 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE8B5BD28C83C70007B9226 /* Main.storyboard */; };
+		CAE8B5D128C83CC6007B9226 /* ContactListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAE8B5C528C83CC6007B9226 /* ContactListTVC.xib */; };
+		CAE8B5D228C83CC6007B9226 /* ContactListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5C628C83CC6007B9226 /* ContactListTVC.swift */; };
+		CAE8B5D328C83CC6007B9226 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5C828C83CC6007B9226 /* ViewController.swift */; };
+		CAE8B5D428C83CC6007B9226 /* TermsAndConditionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5C928C83CC6007B9226 /* TermsAndConditionVC.swift */; };
+		CAE8B5D528C83CC6007B9226 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5CA28C83CC6007B9226 /* SideMenuViewController.swift */; };
+		CAE8B5D628C83CC6007B9226 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5CB28C83CC6007B9226 /* BaseViewController.swift */; };
+		CAE8B5D728C83CC6007B9226 /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5CC28C83CC6007B9226 /* ContactListVC.swift */; };
+		CAE8B5D828C83CC6007B9226 /* PhoneNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5CD28C83CC6007B9226 /* PhoneNumberVC.swift */; };
+		CAE8B5D928C83CC6007B9226 /* FullScreenSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5CE28C83CC6007B9226 /* FullScreenSettingVC.swift */; };
+		CAE8B5DA28C83CC6007B9226 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5CF28C83CC6007B9226 /* HomeVC.swift */; };
+		CAE8B5DB28C83CC6007B9226 /* PermissionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5D028C83CC6007B9226 /* PermissionVC.swift */; };
+		CAE8B5F028C83CDC007B9226 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5DF28C83CDC007B9226 /* ProgressView.swift */; };
+		CAE8B5F128C83CDC007B9226 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5E028C83CDC007B9226 /* ProgressHUD.swift */; };
+		CAE8B5F228C83CDC007B9226 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5E228C83CDC007B9226 /* UIView+Utils.swift */; };
+		CAE8B5F328C83CDC007B9226 /* CollapsibleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5E428C83CDC007B9226 /* CollapsibleTableViewCell.swift */; };
+		CAE8B5F428C83CDC007B9226 /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5E528C83CDC007B9226 /* ExampleData.swift */; };
+		CAE8B5F528C83CDC007B9226 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5E628C83CDC007B9226 /* Extensions.swift */; };
+		CAE8B5F628C83CDC007B9226 /* CollapsibleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5E728C83CDC007B9226 /* CollapsibleTableViewHeader.swift */; };
+		CAE8B5F728C83CDC007B9226 /* DrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5E928C83CDC007B9226 /* DrawerView.swift */; };
+		CAE8B5F828C83CDC007B9226 /* DrawerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5EA28C83CDC007B9226 /* DrawerProtocol.swift */; };
+		CAE8B5F928C83CDC007B9226 /* GlobalFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5EB28C83CDC007B9226 /* GlobalFunction.swift */; };
+		CAE8B5FA28C83CDC007B9226 /* Nexa-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CAE8B5ED28C83CDC007B9226 /* Nexa-Bold.otf */; };
+		CAE8B5FB28C83CDC007B9226 /* Nexa-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CAE8B5EE28C83CDC007B9226 /* Nexa-Light.otf */; };
+		CAE8B5FC28C83CDC007B9226 /* Nexa-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CAE8B5EF28C83CDC007B9226 /* Nexa-Regular.otf */; };
+		CAE8B60028C83CE8007B9226 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAE8B5FE28C83CE8007B9226 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28D72BA9A0AB17ED12779731 /* Pods-RIngerInteractiveApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIngerInteractiveApp.release.xcconfig"; path = "Target Support Files/Pods-RIngerInteractiveApp/Pods-RIngerInteractiveApp.release.xcconfig"; sourceTree = "<group>"; };
+		64F37F867FBFB413193A602D /* Pods_RIngerInteractiveApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RIngerInteractiveApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A19B30DDCA50D163A2A334 /* Pods-RIngerInteractiveApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIngerInteractiveApp.debug.xcconfig"; path = "Target Support Files/Pods-RIngerInteractiveApp/Pods-RIngerInteractiveApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CA6FF3AC291D57290097C383 /* RingerInteractive.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RingerInteractive.xcframework; path = RIngerInteractiveApp/RingerInteractive.xcframework; sourceTree = "<group>"; };
+		CAA85AF529194E2200AD4DBD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CAA85AF629194E2200AD4DBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAE8B5A528C83C38007B9226 /* RIngerInteractiveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RIngerInteractiveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAE8B5AA28C83C38007B9226 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CAE8B5BC28C83C70007B9226 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CAE8B5BD28C83C70007B9226 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CAE8B5C528C83CC6007B9226 /* ContactListTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactListTVC.xib; sourceTree = "<group>"; };
+		CAE8B5C628C83CC6007B9226 /* ContactListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTVC.swift; sourceTree = "<group>"; };
+		CAE8B5C828C83CC6007B9226 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAE8B5C928C83CC6007B9226 /* TermsAndConditionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionVC.swift; sourceTree = "<group>"; };
+		CAE8B5CA28C83CC6007B9226 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		CAE8B5CB28C83CC6007B9226 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CAE8B5CC28C83CC6007B9226 /* ContactListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
+		CAE8B5CD28C83CC6007B9226 /* PhoneNumberVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberVC.swift; sourceTree = "<group>"; };
+		CAE8B5CE28C83CC6007B9226 /* FullScreenSettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenSettingVC.swift; sourceTree = "<group>"; };
+		CAE8B5CF28C83CC6007B9226 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		CAE8B5D028C83CC6007B9226 /* PermissionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionVC.swift; sourceTree = "<group>"; };
+		CAE8B5DF28C83CDC007B9226 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		CAE8B5E028C83CDC007B9226 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		CAE8B5E228C83CDC007B9226 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		CAE8B5E428C83CDC007B9226 /* CollapsibleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewCell.swift; sourceTree = "<group>"; };
+		CAE8B5E528C83CDC007B9226 /* ExampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
+		CAE8B5E628C83CDC007B9226 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CAE8B5E728C83CDC007B9226 /* CollapsibleTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsibleTableViewHeader.swift; sourceTree = "<group>"; };
+		CAE8B5E928C83CDC007B9226 /* DrawerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerView.swift; sourceTree = "<group>"; };
+		CAE8B5EA28C83CDC007B9226 /* DrawerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerProtocol.swift; sourceTree = "<group>"; };
+		CAE8B5EB28C83CDC007B9226 /* GlobalFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunction.swift; sourceTree = "<group>"; };
+		CAE8B5ED28C83CDC007B9226 /* Nexa-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Bold.otf"; sourceTree = "<group>"; };
+		CAE8B5EE28C83CDC007B9226 /* Nexa-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Light.otf"; sourceTree = "<group>"; };
+		CAE8B5EF28C83CDC007B9226 /* Nexa-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Regular.otf"; sourceTree = "<group>"; };
+		CAE8B5FE28C83CE8007B9226 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CAE8B60528C83FF0007B9226 /* RIngerInteractiveApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RIngerInteractiveApp.entitlements; sourceTree = "<group>"; };
+		CAE8B60628C8430B007B9226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAE8B5A228C83C38007B9226 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA6FF3AA291D4DF30097C383 /* Pods_RIngerInteractiveApp.framework in Frameworks */,
+				CA6FF3AD291D572A0097C383 /* RingerInteractive.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		117EA21ED702AEA1665EB386 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8A19B30DDCA50D163A2A334 /* Pods-RIngerInteractiveApp.debug.xcconfig */,
+				28D72BA9A0AB17ED12779731 /* Pods-RIngerInteractiveApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CAA7A83128C84E9300A4F65E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA6FF3AC291D57290097C383 /* RingerInteractive.xcframework */,
+				64F37F867FBFB413193A602D /* Pods_RIngerInteractiveApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAE8B59C28C83C38007B9226 = {
+			isa = PBXGroup;
+			children = (
+				CAE8B5A728C83C38007B9226 /* RIngerInteractiveApp */,
+				CAE8B5A628C83C38007B9226 /* Products */,
+				CAA7A83128C84E9300A4F65E /* Frameworks */,
+				117EA21ED702AEA1665EB386 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		CAE8B5A628C83C38007B9226 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAE8B5A528C83C38007B9226 /* RIngerInteractiveApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAE8B5A728C83C38007B9226 /* RIngerInteractiveApp */ = {
+			isa = PBXGroup;
+			children = (
+				CAA85AF529194E2200AD4DBD /* AppDelegate.swift */,
+				CAA85AF629194E2200AD4DBD /* Assets.xcassets */,
+				CAE8B60628C8430B007B9226 /* Info.plist */,
+				CAE8B60528C83FF0007B9226 /* RIngerInteractiveApp.entitlements */,
+				CAE8B5AA28C83C38007B9226 /* SceneDelegate.swift */,
+				CAE8B5BC28C83C70007B9226 /* LaunchScreen.storyboard */,
+				CAE8B5BD28C83C70007B9226 /* Main.storyboard */,
+				CAE8B5FE28C83CE8007B9226 /* GoogleService-Info.plist */,
+				CAE8B5DD28C83CDC007B9226 /* Resources */,
+				CAE8B5C428C83CC6007B9226 /* UITableView Cell */,
+				CAE8B5C728C83CC6007B9226 /* Viewcontroller */,
+			);
+			path = RIngerInteractiveApp;
+			sourceTree = "<group>";
+		};
+		CAE8B5C428C83CC6007B9226 /* UITableView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CAE8B5C528C83CC6007B9226 /* ContactListTVC.xib */,
+				CAE8B5C628C83CC6007B9226 /* ContactListTVC.swift */,
+			);
+			path = "UITableView Cell";
+			sourceTree = "<group>";
+		};
+		CAE8B5C728C83CC6007B9226 /* Viewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				CAE8B5C828C83CC6007B9226 /* ViewController.swift */,
+				CAE8B5C928C83CC6007B9226 /* TermsAndConditionVC.swift */,
+				CAE8B5CA28C83CC6007B9226 /* SideMenuViewController.swift */,
+				CAE8B5CB28C83CC6007B9226 /* BaseViewController.swift */,
+				CAE8B5CC28C83CC6007B9226 /* ContactListVC.swift */,
+				CAE8B5CD28C83CC6007B9226 /* PhoneNumberVC.swift */,
+				CAE8B5CE28C83CC6007B9226 /* FullScreenSettingVC.swift */,
+				CAE8B5CF28C83CC6007B9226 /* HomeVC.swift */,
+				CAE8B5D028C83CC6007B9226 /* PermissionVC.swift */,
+			);
+			path = Viewcontroller;
+			sourceTree = "<group>";
+		};
+		CAE8B5DD28C83CDC007B9226 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CAE8B5DE28C83CDC007B9226 /* ProgressHUD */,
+				CAE8B5E128C83CDC007B9226 /* UIView+Utils */,
+				CAE8B5E328C83CDC007B9226 /* Expandable Cell */,
+				CAE8B5E828C83CDC007B9226 /* DrawerMenu */,
+				CAE8B5EB28C83CDC007B9226 /* GlobalFunction.swift */,
+				CAE8B5EC28C83CDC007B9226 /* Nexa Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CAE8B5DE28C83CDC007B9226 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				CAE8B5DF28C83CDC007B9226 /* ProgressView.swift */,
+				CAE8B5E028C83CDC007B9226 /* ProgressHUD.swift */,
+			);
+			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		CAE8B5E128C83CDC007B9226 /* UIView+Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CAE8B5E228C83CDC007B9226 /* UIView+Utils.swift */,
+			);
+			path = "UIView+Utils";
+			sourceTree = "<group>";
+		};
+		CAE8B5E328C83CDC007B9226 /* Expandable Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CAE8B5E428C83CDC007B9226 /* CollapsibleTableViewCell.swift */,
+				CAE8B5E528C83CDC007B9226 /* ExampleData.swift */,
+				CAE8B5E628C83CDC007B9226 /* Extensions.swift */,
+				CAE8B5E728C83CDC007B9226 /* CollapsibleTableViewHeader.swift */,
+			);
+			path = "Expandable Cell";
+			sourceTree = "<group>";
+		};
+		CAE8B5E828C83CDC007B9226 /* DrawerMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CAE8B5E928C83CDC007B9226 /* DrawerView.swift */,
+				CAE8B5EA28C83CDC007B9226 /* DrawerProtocol.swift */,
+			);
+			path = DrawerMenu;
+			sourceTree = "<group>";
+		};
+		CAE8B5EC28C83CDC007B9226 /* Nexa Font */ = {
+			isa = PBXGroup;
+			children = (
+				CAE8B5ED28C83CDC007B9226 /* Nexa-Bold.otf */,
+				CAE8B5EE28C83CDC007B9226 /* Nexa-Light.otf */,
+				CAE8B5EF28C83CDC007B9226 /* Nexa-Regular.otf */,
+			);
+			path = "Nexa Font";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAE8B5A428C83C38007B9226 /* RIngerInteractiveApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAE8B5B928C83C39007B9226 /* Build configuration list for PBXNativeTarget "RIngerInteractiveApp" */;
+			buildPhases = (
+				AB5173E3ED688D1DD9153CD7 /* [CP] Check Pods Manifest.lock */,
+				CAE8B5A128C83C38007B9226 /* Sources */,
+				CAE8B5A228C83C38007B9226 /* Frameworks */,
+				CAE8B5A328C83C38007B9226 /* Resources */,
+				029FFA9C55D36DA8C2342B6E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RIngerInteractiveApp;
+			packageProductDependencies = (
+			);
+			productName = RIngerInteractiveApp;
+			productReference = CAE8B5A528C83C38007B9226 /* RIngerInteractiveApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAE8B59D28C83C38007B9226 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					CAE8B5A428C83C38007B9226 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = CAE8B5A028C83C38007B9226 /* Build configuration list for PBXProject "RIngerInteractiveApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAE8B59C28C83C38007B9226;
+			packageReferences = (
+			);
+			productRefGroup = CAE8B5A628C83C38007B9226 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAE8B5A428C83C38007B9226 /* RIngerInteractiveApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAE8B5A328C83C38007B9226 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE8B5BF28C83C70007B9226 /* Main.storyboard in Resources */,
+				CAE8B5BE28C83C70007B9226 /* LaunchScreen.storyboard in Resources */,
+				CAE8B5FC28C83CDC007B9226 /* Nexa-Regular.otf in Resources */,
+				CAE8B5FA28C83CDC007B9226 /* Nexa-Bold.otf in Resources */,
+				CAE8B5FB28C83CDC007B9226 /* Nexa-Light.otf in Resources */,
+				CAE8B60028C83CE8007B9226 /* GoogleService-Info.plist in Resources */,
+				CAA85AF829194E2200AD4DBD /* Assets.xcassets in Resources */,
+				CAE8B5D128C83CC6007B9226 /* ContactListTVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		029FFA9C55D36DA8C2342B6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RIngerInteractiveApp/Pods-RIngerInteractiveApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RIngerInteractiveApp/Pods-RIngerInteractiveApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RIngerInteractiveApp/Pods-RIngerInteractiveApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB5173E3ED688D1DD9153CD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RIngerInteractiveApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAE8B5A128C83C38007B9226 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAA85AF729194E2200AD4DBD /* AppDelegate.swift in Sources */,
+				CAE8B5F728C83CDC007B9226 /* DrawerView.swift in Sources */,
+				CAE8B5DB28C83CC6007B9226 /* PermissionVC.swift in Sources */,
+				CAE8B5D328C83CC6007B9226 /* ViewController.swift in Sources */,
+				CAE8B5F228C83CDC007B9226 /* UIView+Utils.swift in Sources */,
+				CAE8B5D228C83CC6007B9226 /* ContactListTVC.swift in Sources */,
+				CAE8B5D528C83CC6007B9226 /* SideMenuViewController.swift in Sources */,
+				CAE8B5F528C83CDC007B9226 /* Extensions.swift in Sources */,
+				CAE8B5D728C83CC6007B9226 /* ContactListVC.swift in Sources */,
+				CAE8B5F428C83CDC007B9226 /* ExampleData.swift in Sources */,
+				CAE8B5F628C83CDC007B9226 /* CollapsibleTableViewHeader.swift in Sources */,
+				CAE8B5D628C83CC6007B9226 /* BaseViewController.swift in Sources */,
+				CAE8B5F128C83CDC007B9226 /* ProgressHUD.swift in Sources */,
+				CAE8B5F828C83CDC007B9226 /* DrawerProtocol.swift in Sources */,
+				CAE8B5D428C83CC6007B9226 /* TermsAndConditionVC.swift in Sources */,
+				CAE8B5D828C83CC6007B9226 /* PhoneNumberVC.swift in Sources */,
+				CAE8B5DA28C83CC6007B9226 /* HomeVC.swift in Sources */,
+				CAE8B5F028C83CDC007B9226 /* ProgressView.swift in Sources */,
+				CAE8B5AB28C83C38007B9226 /* SceneDelegate.swift in Sources */,
+				CAE8B5D928C83CC6007B9226 /* FullScreenSettingVC.swift in Sources */,
+				CAE8B5F328C83CDC007B9226 /* CollapsibleTableViewCell.swift in Sources */,
+				CAE8B5F928C83CDC007B9226 /* GlobalFunction.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CAE8B5B728C83C39007B9226 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CAE8B5B828C83C39007B9226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAE8B5BA28C83C39007B9226 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8A19B30DDCA50D163A2A334 /* Pods-RIngerInteractiveApp.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = RIngerInteractiveApp/RIngerInteractiveApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QW59CJL5KR;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = QW59CJL5KR;
+				EXCLUDED_ARCHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RIngerInteractiveApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Ringer;
+				INFOPLIST_KEY_NSContactsUsageDescription = "Ringer need access your contact for support you";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.ringerinteractive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Development Ringer Interactive";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Development Ringer Interactive";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CAE8B5BB28C83C39007B9226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28D72BA9A0AB17ED12779731 /* Pods-RIngerInteractiveApp.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = RIngerInteractiveApp/RIngerInteractiveApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Flash App LLC (QW59CJL5KR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Flash App LLC (QW59CJL5KR)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QW59CJL5KR;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = QW59CJL5KR;
+				EXCLUDED_ARCHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RIngerInteractiveApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Ringer;
+				INFOPLIST_KEY_NSContactsUsageDescription = "Ringer need access your contact for support you";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.ringerinteractive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Distribution Ringer Interactive";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Ringer AppStore Distribution";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAE8B5A028C83C38007B9226 /* Build configuration list for PBXProject "RIngerInteractiveApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAE8B5B728C83C39007B9226 /* Debug */,
+				CAE8B5B828C83C39007B9226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAE8B5B928C83C39007B9226 /* Build configuration list for PBXNativeTarget "RIngerInteractiveApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAE8B5BA28C83C39007B9226 /* Debug */,
+				CAE8B5BB28C83C39007B9226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAE8B59D28C83C38007B9226 /* Project object */;
+}
