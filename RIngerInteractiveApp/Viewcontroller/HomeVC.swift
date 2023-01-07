@@ -12,14 +12,23 @@ class HomeVC: BaseViewController, ringerInteractiveDelegate, DrawerControllerDel
     @IBOutlet weak var usContact: UISwitch!
     @IBOutlet weak var usNotification: UISwitch!
     
-    let temp = RingerInteractiveNotification()
+    var temp: RingerInteractiveNotification? = nil
     var drawerVw = DrawerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FirebaseApp.configure()
-        temp.notificationRegister()
+        temp = (UIApplication.shared.delegate as? AppDelegate)?.temp
+        temp?.notificationRegister()
+        Messaging.messaging().token { [weak self] token, error in
+            guard let strongSelf = self else {return}
+            if let error = error {
+                print(error)
+            } else if let token = token {
+                strongSelf.temp?.setFireBaseToken(fcmToken: token)
+                strongSelf.temp?.ringerInteractiveLogin(auth: "dGltQGJhc2Fsc21hcnRzb2x1dGlvbnMuY29tOlJpbmdjIyMxMjM0")
+            }
+        }
         RingerInteractiveNotification.ringerInteractiveDelegate = self
     }
     
@@ -169,26 +178,26 @@ class HomeVC: BaseViewController, ringerInteractiveDelegate, DrawerControllerDel
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) {
-        temp.ringerInteractiveGetContact()
+//        temp.ringerInteractiveGetContact()
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) {
-        temp.ringerInteractiveGetContact()
+//        temp.ringerInteractiveGetContact()
     }
     
     func application(_ application: UIApplication,
                      didReceiveRemoteNotification userInfo: [AnyHashable : Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        temp.ringerInteractiveGetContact()
-        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 30.0) {
-            completionHandler(.newData)
-        }
+//        temp.ringerInteractiveGetContact()
+//        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 30.0) {
+//            completionHandler(.newData)
+//        }
     }
     
     func tokenGenerate(token: String) {
-        print("token is \(token)")
-        RingerInteractiveNotification.ringerInteractiveDelegate = self
-        self.temp.ringerInteractiveLogin(username: "tim@basalsmartsolutions.com", password: "Ringc##1234")
+//        print("token is \(token)")
+//        RingerInteractiveNotification.ringerInteractiveDelegate = self
+//        self.temp.ringerInteractiveLogin(username: "tim@basalsmartsolutions.com", password: "Ringc##1234")
     }
     
     func completionFinishTask() {
