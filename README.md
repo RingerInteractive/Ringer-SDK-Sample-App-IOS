@@ -51,7 +51,6 @@ Login into the SDK by using RingerInteractiveNotification object (example below)
 ```
 	ringerObject.ringerInteractiveLogin(auth: “API KEY”)
 ```
-> Note :- CompanyName and MobileNumber are optional.
 ### Step 8
 Add these methods into AppDelegate to save and update contacts through notifications.
 ```
