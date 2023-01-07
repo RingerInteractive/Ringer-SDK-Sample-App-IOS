@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CA6FF3AA291D4DF30097C383 /* Pods_RIngerInteractiveApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F37F867FBFB413193A602D /* Pods_RIngerInteractiveApp.framework */; };
-		CA6FF3AD291D572A0097C383 /* RingerInteractive.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6FF3AC291D57290097C383 /* RingerInteractive.xcframework */; };
 		CAA85AF729194E2200AD4DBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA85AF529194E2200AD4DBD /* AppDelegate.swift */; };
 		CAA85AF829194E2200AD4DBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAA85AF629194E2200AD4DBD /* Assets.xcassets */; };
+		CAAA30BE296928A000F9F4D2 /* RingerInteractive.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAAA30BD296928A000F9F4D2 /* RingerInteractive.xcframework */; };
+		CAAA30BF296928A000F9F4D2 /* RingerInteractive.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAAA30BD296928A000F9F4D2 /* RingerInteractive.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CAE8B5AB28C83C38007B9226 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5AA28C83C38007B9226 /* SceneDelegate.swift */; };
 		CAE8B5BE28C83C70007B9226 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE8B5BC28C83C70007B9226 /* LaunchScreen.storyboard */; };
 		CAE8B5BF28C83C70007B9226 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE8B5BD28C83C70007B9226 /* Main.storyboard */; };
@@ -41,13 +42,27 @@
 		CAE8B60028C83CE8007B9226 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAE8B5FE28C83CE8007B9226 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CAAA30C0296928A000F9F4D2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CAAA30BF296928A000F9F4D2 /* RingerInteractive.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		28D72BA9A0AB17ED12779731 /* Pods-RIngerInteractiveApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIngerInteractiveApp.release.xcconfig"; path = "Target Support Files/Pods-RIngerInteractiveApp/Pods-RIngerInteractiveApp.release.xcconfig"; sourceTree = "<group>"; };
 		64F37F867FBFB413193A602D /* Pods_RIngerInteractiveApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RIngerInteractiveApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A19B30DDCA50D163A2A334 /* Pods-RIngerInteractiveApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIngerInteractiveApp.debug.xcconfig"; path = "Target Support Files/Pods-RIngerInteractiveApp/Pods-RIngerInteractiveApp.debug.xcconfig"; sourceTree = "<group>"; };
-		CA6FF3AC291D57290097C383 /* RingerInteractive.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RingerInteractive.xcframework; path = RIngerInteractiveApp/RingerInteractive.xcframework; sourceTree = "<group>"; };
 		CAA85AF529194E2200AD4DBD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAA85AF629194E2200AD4DBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAAA30BD296928A000F9F4D2 /* RingerInteractive.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RingerInteractive.xcframework; path = RIngerInteractiveApp/RingerInteractive.xcframework; sourceTree = "<group>"; };
 		CAE8B5A528C83C38007B9226 /* RIngerInteractiveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RIngerInteractiveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE8B5AA28C83C38007B9226 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CAE8B5BC28C83C70007B9226 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,7 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA6FF3AA291D4DF30097C383 /* Pods_RIngerInteractiveApp.framework in Frameworks */,
-				CA6FF3AD291D572A0097C383 /* RingerInteractive.xcframework in Frameworks */,
+				CAAA30BE296928A000F9F4D2 /* RingerInteractive.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +121,7 @@
 		CAA7A83128C84E9300A4F65E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CA6FF3AC291D57290097C383 /* RingerInteractive.xcframework */,
+				CAAA30BD296928A000F9F4D2 /* RingerInteractive.xcframework */,
 				64F37F867FBFB413193A602D /* Pods_RIngerInteractiveApp.framework */,
 			);
 			name = Frameworks;
@@ -245,6 +260,7 @@
 				CAE8B5A228C83C38007B9226 /* Frameworks */,
 				CAE8B5A328C83C38007B9226 /* Resources */,
 				029FFA9C55D36DA8C2342B6E /* [CP] Embed Pods Frameworks */,
+				CAAA30C0296928A000F9F4D2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -1,6 +1,0 @@
-framework module Pods_RIngerInteractiveApp {
-  umbrella header "Pods-RIngerInteractiveApp-umbrella.h"
-
-  export *
-  module * { export * }
-}
