@@ -814,32 +814,23 @@ public protocol ringerInteractiveDelegate {
   func tokenGenerate(token: Swift.String)
   func completionFinishTask()
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class RingerInteractiveNotification : UIKit.UIResponder, FirebaseMessaging.MessagingDelegate, UIKit.UIApplicationDelegate, UserNotifications.UNUserNotificationCenterDelegate {
-  @_Concurrency.MainActor(unsafe) public static var ringerInteractiveDelegate: Ringer_Interactive.ringerInteractiveDelegate?
-  @_Concurrency.MainActor(unsafe) public var completionFinishTask: (() -> ())?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+public class RingerInteractiveNotification {
+  public static var ringerInteractiveDelegate: Ringer_Interactive.ringerInteractiveDelegate?
+  public var completionFinishTask: (() -> ())?
+  public init()
   @objc deinit
 }
 extension Ringer_Interactive.RingerInteractiveNotification {
-  @_Concurrency.MainActor(unsafe) public func notificationRegister()
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func messaging(_ messaging: FirebaseMessaging.Messaging, didReceiveRegistrationToken fcmToken: Swift.String?)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func application(_ application: UIKit.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Foundation.Data)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func application(_ application: UIKit.UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Swift.Error)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func application(_ application: UIKit.UIApplication, handleActionWithIdentifier identifier: Swift.String?, forRemoteNotification userInfo: [Swift.AnyHashable : Any], completionHandler: @escaping () -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func application(_ application: UIKit.UIApplication, didReceiveRemoteNotification userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) public func completeContactTask()
+  public func notificationRegister()
+  public func setFireBaseToken(fcmToken: Swift.String)
+  public func completeContactTask()
 }
 extension Ringer_Interactive.RingerInteractiveNotification {
-  @available(iOS 10.0, *)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, willPresent notification: UserNotifications.UNNotification, withCompletionHandler completionHandler: @escaping (UserNotifications.UNNotificationPresentationOptions) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void)
-}
-extension Ringer_Interactive.RingerInteractiveNotification {
-  @_Concurrency.MainActor(unsafe) public func ringerInteractiveLogin(username: Swift.String, password: Swift.String, CompanyName companyName: Swift.String? = "", MobileNumber mobileNumber: Swift.String? = "")
-  @_Concurrency.MainActor(unsafe) public func ringerInteractiveSearchMobileRegister(username: Swift.String, password: Swift.String, completion: @escaping (_ mobileRegisterID: Swift.String, _ status: Swift.Int) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) public func ringerInteractiveDeleteMobileRegister(username: Swift.String, password: Swift.String, mobileregistrationId: Swift.String, completion: @escaping (_ status: Swift.Int) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) public func ringerInteractiveGetContact()
-  @_Concurrency.MainActor(unsafe) public func saveAndUpdateContact(index: Swift.Int, statusContact: Swift.Bool)
+  public func ringerInteractiveLogin(auth: Swift.String, CompanyName companyName: Swift.String? = "", MobileNumber mobileNumber: Swift.String? = "")
+  public func ringerInteractiveSearchMobileRegister(auth: Swift.String, completion: @escaping (_ mobileRegisterID: Swift.String, _ status: Swift.Int) -> Swift.Void)
+  public func ringerInteractiveDeleteMobileRegister(auth: Swift.String, mobileregistrationId: Swift.String, completion: @escaping (_ status: Swift.Int) -> Swift.Void)
+  public func ringerInteractiveGetContact()
+  public func saveAndUpdateContact(index: Swift.Int, statusContact: Swift.Bool)
 }
 @_hasMissingDesignatedInitializers open class YiUUID {
   open class func uuid() -> Swift.String

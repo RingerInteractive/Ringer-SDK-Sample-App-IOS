@@ -230,10 +230,6 @@ using UInt = size_t;
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import FirebaseMessaging;
-@import Foundation;
-@import UIKit;
-@import UserNotifications;
 #endif
 
 #endif
@@ -254,36 +250,6 @@ using UInt = size_t;
 #endif
 
 #if defined(__OBJC__)
-
-SWIFT_CLASS("_TtC18Ringer_Interactive29RingerInteractiveNotification")
-@interface RingerInteractiveNotification : UIResponder <FIRMessagingDelegate, UIApplicationDelegate, UNUserNotificationCenterDelegate>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class UNUserNotificationCenter;
-@class UNNotification;
-@class UNNotificationResponse;
-
-@interface RingerInteractiveNotification (SWIFT_EXTENSION(Ringer_Interactive))
-- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center willPresentNotification:(UNNotification * _Nonnull)notification withCompletionHandler:(void (^ _Nonnull)(UNNotificationPresentationOptions))completionHandler SWIFT_AVAILABILITY(ios,introduced=10.0);
-- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center didReceiveNotificationResponse:(UNNotificationResponse * _Nonnull)response withCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
-@end
-
-@class FIRMessaging;
-@class NSString;
-@class UIApplication;
-@class NSData;
-@class NSObject;
-
-@interface RingerInteractiveNotification (SWIFT_EXTENSION(Ringer_Interactive))
-- (void)messaging:(FIRMessaging * _Nonnull)messaging didReceiveRegistrationToken:(NSString * _Nullable)fcmToken;
-- (void)application:(UIApplication * _Nonnull)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData * _Nonnull)deviceToken;
-- (void)application:(UIApplication * _Nonnull)application didFailToRegisterForRemoteNotificationsWithError:(NSError * _Nonnull)error;
-- (void)application:(UIApplication * _Nonnull)application handleActionWithIdentifier:(NSString * _Nullable)identifier forRemoteNotification:(NSDictionary * _Nonnull)userInfo completionHandler:(void (^ _Nonnull)(void))completionHandler;
-- (void)application:(UIApplication * _Nonnull)application didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo fetchCompletionHandler:(void (^ _Nonnull)(UIBackgroundFetchResult))completionHandler;
-@end
-
-
 
 #endif
 #if defined(__cplusplus)
