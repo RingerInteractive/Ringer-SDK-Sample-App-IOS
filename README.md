@@ -72,8 +72,8 @@ Add these methods into AppDelegate to save and update contacts through notificat
 
 
 ## How to use sample app
-##### 1.Download lasted sample app on TestFlight 
-##### 2.Build sample app from [Ringer-Sample-App](https://github.com/RingerInteractive/Ringer-Interactive-iOS)
+##### 1.Download lasted sample app on TestFlight k
+##### 2.Build sample app from [Ringer-Sample-App](https://github.com/RingerInteractive/Ringer-SDK-Sample-App-IOS)
 
 ##### After install you should grant those required permission 
 1. Access Contact
