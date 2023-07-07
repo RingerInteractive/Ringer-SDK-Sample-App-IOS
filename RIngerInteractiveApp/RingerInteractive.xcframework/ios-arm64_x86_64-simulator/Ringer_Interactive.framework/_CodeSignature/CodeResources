@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Ringer_Interactive-Swift.h</key>
 		<data>
-		zvSbztBkTppDnmWM6Rb7ZXDrfEI=
+		nhmRZvVd23MthsFfVSmaQC99qyQ=
 		</data>
 		<key>Headers/Ringer_Interactive.h</key>
 		<data>
@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YcvVhSmwxMhtNuOCgAMNaRtwR10=
+		JOpMFjWf2tgLGXEQkgvFXRR2uVs=
 		</data>
 		<key>Modules/Ringer_Interactive.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		QcM+hXnQmz+R5BaiHjSC5Z8zNEA=
+		oYN+QPZYTGiBoL6tY+s7N07AP3M=
 		</data>
 		<key>Modules/Ringer_Interactive.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		pZgRh+Xt/lRnOsma+Auv+tKJSls=
+		lNZkSXMZuruKIzRPZe0S8V0rNN8=
 		</data>
 		<key>Modules/Ringer_Interactive.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		BEeJ/ocxYMDJcSuZLx0Rz5ez50g=
+		Qk67ujWzOTRq2vu1wivU7jllKw4=
 		</data>
 		<key>Modules/Ringer_Interactive.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		pZgRh+Xt/lRnOsma+Auv+tKJSls=
+		lNZkSXMZuruKIzRPZe0S8V0rNN8=
 		</data>
 		<key>Modules/Ringer_Interactive.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		GzgYKLQkYM1p6kl1GU/hugL44Rk=
+		qErLLj+eKavbhAJlfgCOCj3aZ2o=
 		</data>
 		<key>Modules/Ringer_Interactive.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		QcM+hXnQmz+R5BaiHjSC5Z8zNEA=
+		oYN+QPZYTGiBoL6tY+s7N07AP3M=
 		</data>
 		<key>Modules/Ringer_Interactive.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		BZVHwokoxqO7wkBF3m7xWqfupbs=
+		e54n/FWLMBBu96CDBdkNpQauDFk=
 		</data>
 		<key>Modules/Ringer_Interactive.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		SsGbXwenbHm2Ke74VGVztP8a5as=
+		vwngv5rjPP3wCQ4dqc3HKXe1qfM=
 		</data>
 		<key>Modules/Ringer_Interactive.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		BZVHwokoxqO7wkBF3m7xWqfupbs=
+		e54n/FWLMBBu96CDBdkNpQauDFk=
 		</data>
 		<key>Modules/Ringer_Interactive.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rzVf8I/wMO3rS94WqF8m/ZE6Jp8=
+		0MNOFLvNJKPkFdSrzutq4XINDjs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rF6VJaLHE980ZofsWykxHQtxVwegz/hTc9S3K7SNOOA=
+			tW6b+HBIJJiKTfk3vbw+CDtIkCK/6+0QMPz6oTjJioE=
 			</data>
 		</dict>
 		<key>Headers/Ringer_Interactive.h</key>
@@ -81,70 +81,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ThT+KQUtWxcVbJ3txkFzvucROZl060ThIadJLLwDnoU=
+			mT2NbWdWVSLae5GlTCM91dcBKjoBicwr2boWA6CS8U4=
 			</data>
 		</dict>
 		<key>Modules/Ringer_Interactive.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zmPN1i4nl2r9cu/16SFWuAGITp7eP8Qr0yWgNNpa4zg=
+			jFs2rsmpnE+ag7DWtHXR57bEucEw8JU0Aj8Q0evuOAc=
 			</data>
 		</dict>
 		<key>Modules/Ringer_Interactive.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4sdhUfineQukSsDG3zJrk8w83aY0xMuyk5j6i1U04wY=
+			UoFKy+60A0akYsQB77LRh/hY38kI+XQKQt2vH3TSJP4=
 			</data>
 		</dict>
 		<key>Modules/Ringer_Interactive.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zmPN1i4nl2r9cu/16SFWuAGITp7eP8Qr0yWgNNpa4zg=
+			jFs2rsmpnE+ag7DWtHXR57bEucEw8JU0Aj8Q0evuOAc=
 			</data>
 		</dict>
 		<key>Modules/Ringer_Interactive.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ooculuGTOnE9bQlIGRgUVZaVHF2RLLkXyxQbShUH1VE=
+			o+1eqaSXnf3035FoD94ATNXaFtAaV+Lmtvlw1HFNKJE=
 			</data>
 		</dict>
 		<key>Modules/Ringer_Interactive.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ThT+KQUtWxcVbJ3txkFzvucROZl060ThIadJLLwDnoU=
+			mT2NbWdWVSLae5GlTCM91dcBKjoBicwr2boWA6CS8U4=
 			</data>
 		</dict>
 		<key>Modules/Ringer_Interactive.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iR7Qoekw1jY/8GVRyBnVcuHzTvI6UVZGfeA+v4fBr9o=
+			pcrfLXanuD3oOe17CoEpebRdCIog+GuRffhX6xHelgA=
 			</data>
 		</dict>
 		<key>Modules/Ringer_Interactive.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jroY+NWofjuU6upfqMuHZ9rXa0pYeKSE8b9KsCUJVkw=
+			oRLPbSilV2Rgplkbmse5HMWkmz2BG4g4GLxftUzxI6I=
 			</data>
 		</dict>
 		<key>Modules/Ringer_Interactive.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iR7Qoekw1jY/8GVRyBnVcuHzTvI6UVZGfeA+v4fBr9o=
+			pcrfLXanuD3oOe17CoEpebRdCIog+GuRffhX6xHelgA=
 			</data>
 		</dict>
 		<key>Modules/Ringer_Interactive.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8VT3L3pG66D2gMPDRV4GH6cIVRws4YofnVHBknjpvfo=
+			Jyv7yIALRuPcK+ZKFqEau9pGpK76ptoW14dx3uEroso=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
