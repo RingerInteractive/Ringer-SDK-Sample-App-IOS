@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Ringer_Interactive
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AdSupport
@@ -320,19 +320,19 @@ public struct Attributes {
   final public class func allItems(_ itemClass: Ringer_Interactive.ItemClass) -> [[Swift.String : Any]]
   final public func allItems() -> [[Swift.String : Any]]
   @available(iOS 8.0, *)
-  final public func getSharedPassword(_ completion: @escaping (_ account: Swift.String?, _ password: Swift.String?, _ error: Swift.Error?) -> () = { account, password, error -> () in })
+  final public func getSharedPassword(_ completion: @escaping (_ account: Swift.String?, _ password: Swift.String?, _ error: (any Swift.Error)?) -> () = { account, password, error -> () in })
   @available(iOS 8.0, *)
-  final public func getSharedPassword(_ account: Swift.String, completion: @escaping (_ password: Swift.String?, _ error: Swift.Error?) -> () = { password, error -> () in })
+  final public func getSharedPassword(_ account: Swift.String, completion: @escaping (_ password: Swift.String?, _ error: (any Swift.Error)?) -> () = { password, error -> () in })
   @available(iOS 8.0, *)
-  final public func setSharedPassword(_ password: Swift.String, account: Swift.String, completion: @escaping (_ error: Swift.Error?) -> () = { e -> () in })
+  final public func setSharedPassword(_ password: Swift.String, account: Swift.String, completion: @escaping (_ error: (any Swift.Error)?) -> () = { e -> () in })
   @available(iOS 8.0, *)
-  final public func removeSharedPassword(_ account: Swift.String, completion: @escaping (_ error: Swift.Error?) -> () = { e -> () in })
+  final public func removeSharedPassword(_ account: Swift.String, completion: @escaping (_ error: (any Swift.Error)?) -> () = { e -> () in })
   @available(iOS 8.0, *)
-  final public class func requestSharedWebCredential(_ completion: @escaping (_ credentials: [[Swift.String : Swift.String]], _ error: Swift.Error?) -> () = { credentials, error -> () in })
+  final public class func requestSharedWebCredential(_ completion: @escaping (_ credentials: [[Swift.String : Swift.String]], _ error: (any Swift.Error)?) -> () = { credentials, error -> () in })
   @available(iOS 8.0, *)
-  final public class func requestSharedWebCredential(domain: Swift.String, completion: @escaping (_ credentials: [[Swift.String : Swift.String]], _ error: Swift.Error?) -> () = { credentials, error -> () in })
+  final public class func requestSharedWebCredential(domain: Swift.String, completion: @escaping (_ credentials: [[Swift.String : Swift.String]], _ error: (any Swift.Error)?) -> () = { credentials, error -> () in })
   @available(iOS 8.0, *)
-  final public class func requestSharedWebCredential(domain: Swift.String, account: Swift.String, completion: @escaping (_ credentials: [[Swift.String : Swift.String]], _ error: Swift.Error?) -> () = { credentials, error -> () in })
+  final public class func requestSharedWebCredential(domain: Swift.String, account: Swift.String, completion: @escaping (_ credentials: [[Swift.String : Swift.String]], _ error: (any Swift.Error)?) -> () = { credentials, error -> () in })
   @available(iOS 8.0, *)
   final public class func generatePassword() -> Swift.String
   @objc deinit
@@ -821,7 +821,6 @@ extension Ringer_Interactive.Status : Foundation.CustomNSError {
 public class ContactSave {
   public init()
   public func requestAccess()
-  public func downloadImageAndContactSave(name: Swift.String, number: [Swift.String], editNumber: Swift.String = "", imageUrl: Swift.String = "", statusContact: Swift.Bool)
   @objc deinit
 }
 public protocol ringerInteractiveDelegate {
@@ -832,7 +831,7 @@ public protocol ringerInteractiveDelegate {
   func completionFinishTask()
 }
 public class RingerInteractiveNotification {
-  public static var ringerInteractiveDelegate: Ringer_Interactive.ringerInteractiveDelegate?
+  public static var ringerInteractiveDelegate: (any Ringer_Interactive.ringerInteractiveDelegate)?
   public var completionFinishTask: (() -> ())?
   public init()
   @objc deinit
@@ -847,7 +846,7 @@ extension Ringer_Interactive.RingerInteractiveNotification {
   public func ringerInteractiveSearchMobileRegister(auth: Swift.String, completion: @escaping (_ mobileRegisterID: Swift.String, _ status: Swift.Int) -> Swift.Void)
   public func ringerInteractiveDeleteMobileRegister(auth: Swift.String, mobileregistrationId: Swift.String, completion: @escaping (_ status: Swift.Int) -> Swift.Void)
   public func ringerInteractiveGetContact()
-  public func saveAndUpdateContact(index: Swift.Int, statusContact: Swift.Bool)
+  public func saveAndUpdateContact(index: Swift.Int)
 }
 @_hasMissingDesignatedInitializers open class YiUUID {
   open class func uuid() -> Swift.String
