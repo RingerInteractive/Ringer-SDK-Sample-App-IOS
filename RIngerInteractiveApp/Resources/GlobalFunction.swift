@@ -29,4 +29,9 @@ class GlobalFunction: NSObject {
         hub.hide(animated: true)
         UIApplication.shared.windows.first?.isUserInteractionEnabled = true
     }
+    
+    static var keyDev = "cmluZ2VyZGV2M0BnbWFpbC5jb206cmluZ2VyZGV2MjAyMw=="
+    static var urlDev = "http://35.224.7.3:9000/"
+    static var keyProd = "dGltQGJhc2Fsc21hcnRzb2x1dGlvbnMuY29tOlJpbmdjIyMxMjM0"
+    static var urlProd = "https://sandbox.thrio.io/"
 }

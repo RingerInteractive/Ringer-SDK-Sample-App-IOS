@@ -495,7 +495,7 @@ There are many variations of passages of Lorem Ipsum available, but the majority
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Unw-UI-SSJ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="585.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="single_logo" translatesAutoresizingMaskIntoConstraints="NO" id="AEk-hr-aM9">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="single_logo" translatesAutoresizingMaskIntoConstraints="NO" id="AEk-hr-aM9">
                                                 <rect key="frame" x="137.5" y="50" width="100" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="HSV-op-nEV"/>
@@ -788,6 +788,7 @@ There are many variations of passages of Lorem Ipsum available, but the majority
                     </view>
                     <navigationItem key="navigationItem" id="L9o-72-fOQ"/>
                     <connections>
+                        <outlet property="imgLogo" destination="AEk-hr-aM9" id="VlR-xt-vpX"/>
                         <outlet property="usContact" destination="JXG-z8-huR" id="GfC-oN-hiK"/>
                         <outlet property="usNotification" destination="u7T-us-tAa" id="vTC-3p-Rct"/>
                     </connections>
