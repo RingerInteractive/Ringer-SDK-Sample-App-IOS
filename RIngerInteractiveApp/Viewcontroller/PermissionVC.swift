@@ -165,9 +165,9 @@ class PermissionVC: BaseViewController, UNUserNotificationCenterDelegate, Messag
         topWindow?.rootViewController?.present(alert, animated: true)
     }
     func registerForRemoteNotifications() {
-        Messaging.messaging().delegate = self
+//        Messaging.messaging().delegate = /*self*/
         if #available(iOS 10.0, *) {
-            UNUserNotificationCenter.current().delegate = self
+//            UNUserNotificationCenter.current().delegate = self
             
             let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
             UNUserNotificationCenter.current().requestAuthorization(

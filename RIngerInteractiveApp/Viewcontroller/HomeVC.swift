@@ -27,7 +27,18 @@ class HomeVC: BaseViewController, ringerInteractiveDelegate, DrawerControllerDel
                 print(error)
             } else if let token = token {
                 strongSelf.temp?.setFireBaseToken(fcmToken: token)
-                strongSelf.temp?.ringerInteractiveLogin(auth: "dGltQGJhc2Fsc21hcnRzb2x1dGlvbnMuY29tOlJpbmdjIyMxMjM0")
+                if let keyAndUrl = strongSelf.temp?.getKeyAndUrl() {
+                    if keyAndUrl.key.isEmpty || keyAndUrl.url.isEmpty {
+//                        strongSelf.temp?.setKeyAndUrl(key: GlobalFunction.keyProd, url: GlobalFunction.urlProd)
+                        strongSelf.temp?.setKeyAndUrl(key: GlobalFunction.keyDev, url: GlobalFunction.urlDev)
+                    } else {
+                        //Dont set use current key and url
+                        strongSelf.temp?.ringerInteractiveLogin(auth: keyAndUrl.key)
+                    }
+                } else {
+                    strongSelf.temp?.setKeyAndUrl(key: GlobalFunction.keyDev, url: GlobalFunction.urlDev)
+                }
+//                strongSelf.temp?.ringerInteractiveLogin(auth: "dGltQGJhc2Fsc21hcnRzb2x1dGlvbnMuY29tOlJpbmdjIyMxMjM0")
             }
         }
         RingerInteractiveNotification.ringerInteractiveDelegate = self
