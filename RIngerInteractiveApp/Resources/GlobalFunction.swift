@@ -31,7 +31,7 @@ class GlobalFunction: NSObject {
     }
     
     static var keyDev = "cmluZ2VyZGV2M0BnbWFpbC5jb206cmluZ2VyZGV2MjAyMw=="
-    static var urlDev = "https://dev-1.ringerid.com/api/"
-    static var keyProd = "dGltQGJhc2Fsc21hcnRzb2x1dGlvbnMuY29tOlJpbmdjIyMxMjM0"
-    static var urlProd = "https://sandbox.thrio.io/"
+    static var urlDev = "https://login.ringerid.com/api/"
+    static var keyProd = "cmluZ2VyZGV2M0BnbWFpbC5jb206cmluZ2VyZGV2MjAyMw=="
+    static var urlProd = "https://login.ringerid.com/api/"
 }

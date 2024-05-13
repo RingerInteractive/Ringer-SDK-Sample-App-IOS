@@ -1,0 +1,11 @@
+framework module Ringer_Interactive {
+  umbrella header "Ringer_Interactive.h"
+  export *
+
+  module * { export * }
+}
+
+module Ringer_Interactive.Swift {
+  header "Ringer_Interactive-Swift.h"
+  requires objc
+}

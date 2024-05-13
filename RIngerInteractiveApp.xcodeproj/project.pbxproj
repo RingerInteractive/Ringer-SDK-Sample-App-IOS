@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA4E30E42BF25B6D001927A9 /* RingerInteractive.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4E30E12BF25AF3001927A9 /* RingerInteractive.xcframework */; };
+		CA4E30E52BF25B6D001927A9 /* RingerInteractive.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA4E30E12BF25AF3001927A9 /* RingerInteractive.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CA6FF3AA291D4DF30097C383 /* Pods_RIngerInteractiveApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64F37F867FBFB413193A602D /* Pods_RIngerInteractiveApp.framework */; };
 		CAA85AF729194E2200AD4DBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA85AF529194E2200AD4DBD /* AppDelegate.swift */; };
 		CAA85AF829194E2200AD4DBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAA85AF629194E2200AD4DBD /* Assets.xcassets */; };
-		CAC5BD5C2AC8699100345B60 /* Ringer_Interactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAABA0CA2AC13C85008DFB15 /* Ringer_Interactive.framework */; };
-		CAC5BD5D2AC8699100345B60 /* Ringer_Interactive.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAABA0CA2AC13C85008DFB15 /* Ringer_Interactive.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CACCB57E2B4D9B6800B1E788 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACCB57D2B4D9B6800B1E788 /* CustomLabel.swift */; };
 		CAE8B5AB28C83C38007B9226 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8B5AA28C83C38007B9226 /* SceneDelegate.swift */; };
 		CAE8B5BE28C83C70007B9226 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE8B5BC28C83C70007B9226 /* LaunchScreen.storyboard */; };
@@ -43,24 +43,14 @@
 		CAE8B60028C83CE8007B9226 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAE8B5FE28C83CE8007B9226 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CAABA0C92AC13C85008DFB15 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CAABA0C52AC13C85008DFB15 /* Ringer-Interactive.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CA81891A28BA70770017C2CC;
-			remoteInfo = "Ringer-Interactive";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		CAC5BD5E2AC8699100345B60 /* Embed Frameworks */ = {
+		CA4E30E62BF25B6E001927A9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CAC5BD5D2AC8699100345B60 /* Ringer_Interactive.framework in Embed Frameworks */,
+				CA4E30E52BF25B6D001927A9 /* RingerInteractive.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,9 +61,9 @@
 		28D72BA9A0AB17ED12779731 /* Pods-RIngerInteractiveApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIngerInteractiveApp.release.xcconfig"; path = "Target Support Files/Pods-RIngerInteractiveApp/Pods-RIngerInteractiveApp.release.xcconfig"; sourceTree = "<group>"; };
 		64F37F867FBFB413193A602D /* Pods_RIngerInteractiveApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RIngerInteractiveApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A19B30DDCA50D163A2A334 /* Pods-RIngerInteractiveApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIngerInteractiveApp.debug.xcconfig"; path = "Target Support Files/Pods-RIngerInteractiveApp/Pods-RIngerInteractiveApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CA4E30E12BF25AF3001927A9 /* RingerInteractive.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RingerInteractive.xcframework; path = RIngerInteractiveApp/RingerInteractive.xcframework; sourceTree = "<group>"; };
 		CAA85AF529194E2200AD4DBD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAA85AF629194E2200AD4DBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CAABA0C52AC13C85008DFB15 /* Ringer-Interactive.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Ringer-Interactive.xcodeproj"; path = "../../Ringer-Interactive-iOS/Ringer-Interactive.xcodeproj"; sourceTree = "<group>"; };
 		CACCB57D2B4D9B6800B1E788 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		CAE8B5A528C83C38007B9226 /* RIngerInteractiveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RIngerInteractiveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE8B5AA28C83C38007B9226 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,8 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAC5BD5C2AC8699100345B60 /* Ringer_Interactive.framework in Frameworks */,
 				CA6FF3AA291D4DF30097C383 /* Pods_RIngerInteractiveApp.framework in Frameworks */,
+				CA4E30E42BF25B6D001927A9 /* RingerInteractive.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,17 +123,10 @@
 		CAA7A83128C84E9300A4F65E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA4E30E12BF25AF3001927A9 /* RingerInteractive.xcframework */,
 				64F37F867FBFB413193A602D /* Pods_RIngerInteractiveApp.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CAABA0C62AC13C85008DFB15 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CAABA0CA2AC13C85008DFB15 /* Ringer_Interactive.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		CAE8B59C28C83C38007B9226 = {
@@ -167,7 +150,6 @@
 		CAE8B5A728C83C38007B9226 /* RIngerInteractiveApp */ = {
 			isa = PBXGroup;
 			children = (
-				CAABA0C52AC13C85008DFB15 /* Ringer-Interactive.xcodeproj */,
 				CAA85AF529194E2200AD4DBD /* AppDelegate.swift */,
 				CAA85AF629194E2200AD4DBD /* Assets.xcassets */,
 				CAE8B60628C8430B007B9226 /* Info.plist */,
@@ -281,7 +263,7 @@
 				CAE8B5A228C83C38007B9226 /* Frameworks */,
 				CAE8B5A328C83C38007B9226 /* Resources */,
 				029FFA9C55D36DA8C2342B6E /* [CP] Embed Pods Frameworks */,
-				CAC5BD5E2AC8699100345B60 /* Embed Frameworks */,
+				CA4E30E62BF25B6E001927A9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,28 +304,12 @@
 			);
 			productRefGroup = CAE8B5A628C83C38007B9226 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CAABA0C62AC13C85008DFB15 /* Products */;
-					ProjectRef = CAABA0C52AC13C85008DFB15 /* Ringer-Interactive.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				CAE8B5A428C83C38007B9226 /* RIngerInteractiveApp */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		CAABA0CA2AC13C85008DFB15 /* Ringer_Interactive.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Ringer_Interactive.framework;
-			remoteRef = CAABA0C92AC13C85008DFB15 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CAE8B5A328C83C38007B9226 /* Resources */ = {
@@ -567,7 +533,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Tuấn Anh Dang (8VYA65VB2A)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tuấn Anh Dang (8VYA65VB2A)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = QW59CJL5KR;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = QW59CJL5KR;
 				EXCLUDED_ARCHS = "";
@@ -585,7 +551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.ringerinteractive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -612,7 +578,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Flash App LLC (QW59CJL5KR)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Flash App LLC (QW59CJL5KR)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = QW59CJL5KR;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = QW59CJL5KR;
 				EXCLUDED_ARCHS = "";
@@ -630,7 +596,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.ringerinteractive;
 				PRODUCT_NAME = "$(TARGET_NAME)";

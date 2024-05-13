@@ -1,0 +1,880 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Ringer_Interactive
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AdSupport
+import Contacts
+import ContactsUI
+import Foundation
+import LocalAuthentication
+@_exported import Ringer_Interactive
+import Security
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct RingerInteractive {
+  public var text: Swift.String {
+    get
+  }
+  public init()
+}
+public let KeychainAccessErrorDomain: Swift.String
+public enum ItemClass {
+  case genericPassword
+  case internetPassword
+}
+public enum ProtocolType {
+  case ftp
+  case ftpAccount
+  case http
+  case irc
+  case nntp
+  case pop3
+  case smtp
+  case socks
+  case imap
+  case ldap
+  case appleTalk
+  case afp
+  case telnet
+  case ssh
+  case ftps
+  case https
+  case httpProxy
+  case httpsProxy
+  case ftpProxy
+  case smb
+  case rtsp
+  case rtspProxy
+  case daap
+  case eppc
+  case ipp
+  case nntps
+  case ldaps
+  case telnetS
+  case imaps
+  case ircs
+  case pop3S
+}
+public enum AuthenticationType {
+  case ntlm
+  case msn
+  case dpa
+  case rpa
+  case httpBasic
+  case httpDigest
+  case htmlForm
+  case `default`
+}
+public enum Accessibility {
+  case whenUnlocked
+  case afterFirstUnlock
+  @available(macCatalyst, unavailable)
+  case always
+  @available(iOS 8.0, macOS 10.10, *)
+  case whenPasscodeSetThisDeviceOnly
+  case whenUnlockedThisDeviceOnly
+  case afterFirstUnlockThisDeviceOnly
+  @available(macCatalyst, unavailable)
+  case alwaysThisDeviceOnly
+}
+public enum AuthenticationUI {
+  case allow
+  case fail
+  case skip
+  public static func == (a: Ringer_Interactive.AuthenticationUI, b: Ringer_Interactive.AuthenticationUI) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOS 9.0, macOS 10.11, *)
+extension Ringer_Interactive.AuthenticationUI {
+  public var rawValue: Swift.String {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+public struct AuthenticationPolicy : Swift.OptionSet {
+  @available(iOS 8.0, macOS 10.10, watchOS 2.0, tvOS 8.0, *)
+  public static let userPresence: Ringer_Interactive.AuthenticationPolicy
+  @available(iOS 11.3, macOS 10.13.4, watchOS 4.3, tvOS 11.3, *)
+  public static let biometryAny: Ringer_Interactive.AuthenticationPolicy
+  @available(iOS, introduced: 9.0, deprecated: 11.3, renamed: "biometryAny")
+  @available(macOS, introduced: 10.12.1, deprecated: 10.13.4, renamed: "biometryAny")
+  @available(watchOS, introduced: 2.0, deprecated: 4.3, renamed: "biometryAny")
+  @available(tvOS, introduced: 9.0, deprecated: 11.3, renamed: "biometryAny")
+  public static let touchIDAny: Ringer_Interactive.AuthenticationPolicy
+  @available(iOS 11.3, macOS 10.13, watchOS 4.3, tvOS 11.3, *)
+  public static let biometryCurrentSet: Ringer_Interactive.AuthenticationPolicy
+  @available(iOS, introduced: 9.0, deprecated: 11.3, renamed: "biometryCurrentSet")
+  @available(macOS, introduced: 10.12.1, deprecated: 10.13.4, renamed: "biometryCurrentSet")
+  @available(watchOS, introduced: 2.0, deprecated: 4.3, renamed: "biometryCurrentSet")
+  @available(tvOS, introduced: 9.0, deprecated: 11.3, renamed: "biometryCurrentSet")
+  public static let touchIDCurrentSet: Ringer_Interactive.AuthenticationPolicy
+  @available(iOS 9.0, macOS 10.11, watchOS 2.0, tvOS 9.0, *)
+  public static let devicePasscode: Ringer_Interactive.AuthenticationPolicy
+  @available(macOS 10.15, *)
+  @available(iOS, unavailable)
+  @available(watchOS, unavailable)
+  @available(tvOS, unavailable)
+  public static let watch: Ringer_Interactive.AuthenticationPolicy
+  @available(iOS 9.0, macOS 10.12.1, watchOS 2.0, tvOS 9.0, *)
+  public static let or: Ringer_Interactive.AuthenticationPolicy
+  @available(iOS 9.0, macOS 10.12.1, watchOS 2.0, tvOS 9.0, *)
+  public static let and: Ringer_Interactive.AuthenticationPolicy
+  @available(iOS 9.0, macOS 10.12.1, watchOS 2.0, tvOS 9.0, *)
+  public static let privateKeyUsage: Ringer_Interactive.AuthenticationPolicy
+  @available(iOS 9.0, macOS 10.12.1, watchOS 2.0, tvOS 9.0, *)
+  public static let applicationPassword: Ringer_Interactive.AuthenticationPolicy
+  public let rawValue: Swift.UInt
+  public init(rawValue: Swift.UInt)
+  public typealias ArrayLiteralElement = Ringer_Interactive.AuthenticationPolicy
+  public typealias Element = Ringer_Interactive.AuthenticationPolicy
+  public typealias RawValue = Swift.UInt
+}
+public struct Attributes {
+  public var `class`: Swift.String? {
+    get
+  }
+  public var data: Foundation.Data? {
+    get
+  }
+  public var ref: Foundation.Data? {
+    get
+  }
+  public var persistentRef: Foundation.Data? {
+    get
+  }
+  public var accessible: Swift.String? {
+    get
+  }
+  public var accessControl: Security.SecAccessControl? {
+    get
+  }
+  public var accessGroup: Swift.String? {
+    get
+  }
+  public var synchronizable: Swift.Bool? {
+    get
+  }
+  public var creationDate: Foundation.Date? {
+    get
+  }
+  public var modificationDate: Foundation.Date? {
+    get
+  }
+  public var attributeDescription: Swift.String? {
+    get
+  }
+  public var comment: Swift.String? {
+    get
+  }
+  public var creator: Swift.String? {
+    get
+  }
+  public var type: Swift.String? {
+    get
+  }
+  public var label: Swift.String? {
+    get
+  }
+  public var isInvisible: Swift.Bool? {
+    get
+  }
+  public var isNegative: Swift.Bool? {
+    get
+  }
+  public var account: Swift.String? {
+    get
+  }
+  public var service: Swift.String? {
+    get
+  }
+  public var generic: Foundation.Data? {
+    get
+  }
+  public var securityDomain: Swift.String? {
+    get
+  }
+  public var server: Swift.String? {
+    get
+  }
+  public var `protocol`: Swift.String? {
+    get
+  }
+  public var authenticationType: Swift.String? {
+    get
+  }
+  public var port: Swift.Int? {
+    get
+  }
+  public var path: Swift.String? {
+    get
+  }
+  public subscript(key: Swift.String) -> Any? {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class Keychain {
+  final public var itemClass: Ringer_Interactive.ItemClass {
+    get
+  }
+  final public var service: Swift.String {
+    get
+  }
+  final public var accessGroup: Swift.String? {
+    get
+  }
+  final public var server: Foundation.URL {
+    get
+  }
+  final public var protocolType: Ringer_Interactive.ProtocolType {
+    get
+  }
+  final public var authenticationType: Ringer_Interactive.AuthenticationType {
+    get
+  }
+  final public var accessibility: Ringer_Interactive.Accessibility {
+    get
+  }
+  @available(iOS 8.0, macOS 10.10, *)
+  @available(watchOS, unavailable)
+  final public var authenticationPolicy: Ringer_Interactive.AuthenticationPolicy? {
+    get
+  }
+  final public var synchronizable: Swift.Bool {
+    get
+  }
+  final public var label: Swift.String? {
+    get
+  }
+  final public var comment: Swift.String? {
+    get
+  }
+  @available(iOS 8.0, macOS 10.10, *)
+  @available(watchOS, unavailable)
+  final public var authenticationPrompt: Swift.String? {
+    get
+  }
+  @available(iOS 9.0, macOS 10.11, *)
+  final public var authenticationUI: Ringer_Interactive.AuthenticationUI {
+    get
+  }
+  @available(iOS 9.0, macOS 10.11, *)
+  final public var authenticationContext: LocalAuthentication.LAContext? {
+    get
+  }
+  convenience public init()
+  convenience public init(service: Swift.String)
+  convenience public init(accessGroup: Swift.String)
+  convenience public init(service: Swift.String, accessGroup: Swift.String)
+  convenience public init(server: Swift.String, protocolType: Ringer_Interactive.ProtocolType, accessGroup: Swift.String? = nil, authenticationType: Ringer_Interactive.AuthenticationType = .default)
+  convenience public init(server: Foundation.URL, protocolType: Ringer_Interactive.ProtocolType, accessGroup: Swift.String? = nil, authenticationType: Ringer_Interactive.AuthenticationType = .default)
+  final public func accessibility(_ accessibility: Ringer_Interactive.Accessibility) -> Ringer_Interactive.Keychain
+  @available(iOS 8.0, macOS 10.10, *)
+  @available(watchOS, unavailable)
+  final public func accessibility(_ accessibility: Ringer_Interactive.Accessibility, authenticationPolicy: Ringer_Interactive.AuthenticationPolicy) -> Ringer_Interactive.Keychain
+  final public func synchronizable(_ synchronizable: Swift.Bool) -> Ringer_Interactive.Keychain
+  final public func label(_ label: Swift.String) -> Ringer_Interactive.Keychain
+  final public func comment(_ comment: Swift.String) -> Ringer_Interactive.Keychain
+  final public func attributes(_ attributes: [Swift.String : Any]) -> Ringer_Interactive.Keychain
+  @available(iOS 8.0, macOS 10.10, *)
+  @available(watchOS, unavailable)
+  final public func authenticationPrompt(_ authenticationPrompt: Swift.String) -> Ringer_Interactive.Keychain
+  @available(iOS 9.0, macOS 10.11, *)
+  final public func authenticationUI(_ authenticationUI: Ringer_Interactive.AuthenticationUI) -> Ringer_Interactive.Keychain
+  @available(iOS 9.0, macOS 10.11, *)
+  final public func authenticationContext(_ authenticationContext: LocalAuthentication.LAContext) -> Ringer_Interactive.Keychain
+  final public func get(_ key: Swift.String, ignoringAttributeSynchronizable: Swift.Bool = true) throws -> Swift.String?
+  final public func getString(_ key: Swift.String, ignoringAttributeSynchronizable: Swift.Bool = true) throws -> Swift.String?
+  final public func getData(_ key: Swift.String, ignoringAttributeSynchronizable: Swift.Bool = true) throws -> Foundation.Data?
+  final public func get<T>(_ key: Swift.String, ignoringAttributeSynchronizable: Swift.Bool = true, handler: (Ringer_Interactive.Attributes?) -> T) throws -> T
+  final public func set(_ value: Swift.String, key: Swift.String, ignoringAttributeSynchronizable: Swift.Bool = true) throws
+  final public func set(_ value: Foundation.Data, key: Swift.String, ignoringAttributeSynchronizable: Swift.Bool = true) throws
+  final public subscript(key: Swift.String) -> Swift.String? {
+    get
+    set
+  }
+  final public subscript(string key: Swift.String) -> Swift.String? {
+    get
+    set
+  }
+  final public subscript(data key: Swift.String) -> Foundation.Data? {
+    get
+    set
+  }
+  final public subscript(attributes key: Swift.String) -> Ringer_Interactive.Attributes? {
+    get
+  }
+  final public func remove(_ key: Swift.String, ignoringAttributeSynchronizable: Swift.Bool = true) throws
+  final public func removeAll() throws
+  final public func contains(_ key: Swift.String, withoutAuthenticationUI: Swift.Bool = false) throws -> Swift.Bool
+  final public class func allKeys(_ itemClass: Ringer_Interactive.ItemClass) -> [(Swift.String, Swift.String)]
+  final public func allKeys() -> [Swift.String]
+  final public class func allItems(_ itemClass: Ringer_Interactive.ItemClass) -> [[Swift.String : Any]]
+  final public func allItems() -> [[Swift.String : Any]]
+  @available(iOS 8.0, *)
+  final public func getSharedPassword(_ completion: @escaping (_ account: Swift.String?, _ password: Swift.String?, _ error: (any Swift.Error)?) -> () = { account, password, error -> () in })
+  @available(iOS 8.0, *)
+  final public func getSharedPassword(_ account: Swift.String, completion: @escaping (_ password: Swift.String?, _ error: (any Swift.Error)?) -> () = { password, error -> () in })
+  @available(iOS 8.0, *)
+  final public func setSharedPassword(_ password: Swift.String, account: Swift.String, completion: @escaping (_ error: (any Swift.Error)?) -> () = { e -> () in })
+  @available(iOS 8.0, *)
+  final public func removeSharedPassword(_ account: Swift.String, completion: @escaping (_ error: (any Swift.Error)?) -> () = { e -> () in })
+  @available(iOS 8.0, *)
+  final public class func requestSharedWebCredential(_ completion: @escaping (_ credentials: [[Swift.String : Swift.String]], _ error: (any Swift.Error)?) -> () = { credentials, error -> () in })
+  @available(iOS 8.0, *)
+  final public class func requestSharedWebCredential(domain: Swift.String, completion: @escaping (_ credentials: [[Swift.String : Swift.String]], _ error: (any Swift.Error)?) -> () = { credentials, error -> () in })
+  @available(iOS 8.0, *)
+  final public class func requestSharedWebCredential(domain: Swift.String, account: Swift.String, completion: @escaping (_ credentials: [[Swift.String : Swift.String]], _ error: (any Swift.Error)?) -> () = { credentials, error -> () in })
+  @available(iOS 8.0, *)
+  final public class func generatePassword() -> Swift.String
+  @objc deinit
+}
+extension Ringer_Interactive.Keychain : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  final public var description: Swift.String {
+    get
+  }
+  final public var debugDescription: Swift.String {
+    get
+  }
+}
+extension Ringer_Interactive.Attributes : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension Ringer_Interactive.ItemClass : Swift.RawRepresentable, Swift.CustomStringConvertible {
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+  public typealias RawValue = Swift.String
+}
+extension Ringer_Interactive.ProtocolType : Swift.RawRepresentable, Swift.CustomStringConvertible {
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+  public typealias RawValue = Swift.String
+}
+extension Ringer_Interactive.AuthenticationType : Swift.RawRepresentable, Swift.CustomStringConvertible {
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+  public typealias RawValue = Swift.String
+}
+extension Ringer_Interactive.Accessibility : Swift.RawRepresentable, Swift.CustomStringConvertible {
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+  public typealias RawValue = Swift.String
+}
+public enum Status : Darwin.OSStatus, Swift.Error {
+  case success
+  case unimplemented
+  case diskFull
+  case io
+  case opWr
+  case param
+  case wrPerm
+  case allocate
+  case userCanceled
+  case badReq
+  case internalComponent
+  case notAvailable
+  case readOnly
+  case authFailed
+  case noSuchKeychain
+  case invalidKeychain
+  case duplicateKeychain
+  case duplicateCallback
+  case invalidCallback
+  case duplicateItem
+  case itemNotFound
+  case bufferTooSmall
+  case dataTooLarge
+  case noSuchAttr
+  case invalidItemRef
+  case invalidSearchRef
+  case noSuchClass
+  case noDefaultKeychain
+  case interactionNotAllowed
+  case readOnlyAttr
+  case wrongSecVersion
+  case keySizeNotAllowed
+  case noStorageModule
+  case noCertificateModule
+  case noPolicyModule
+  case interactionRequired
+  case dataNotAvailable
+  case dataNotModifiable
+  case createChainFailed
+  case invalidPrefsDomain
+  case inDarkWake
+  case aclNotSimple
+  case policyNotFound
+  case invalidTrustSetting
+  case noAccessForItem
+  case invalidOwnerEdit
+  case trustNotAvailable
+  case unsupportedFormat
+  case unknownFormat
+  case keyIsSensitive
+  case multiplePrivKeys
+  case passphraseRequired
+  case invalidPasswordRef
+  case invalidTrustSettings
+  case noTrustSettings
+  case pkcs12VerifyFailure
+  case invalidCertificate
+  case notSigner
+  case policyDenied
+  case invalidKey
+  case decode
+  case `internal`
+  case unsupportedAlgorithm
+  case unsupportedOperation
+  case unsupportedPadding
+  case itemInvalidKey
+  case itemInvalidKeyType
+  case itemInvalidValue
+  case itemClassMissing
+  case itemMatchUnsupported
+  case useItemListUnsupported
+  case useKeychainUnsupported
+  case useKeychainListUnsupported
+  case returnDataUnsupported
+  case returnAttributesUnsupported
+  case returnRefUnsupported
+  case returnPersitentRefUnsupported
+  case valueRefUnsupported
+  case valuePersistentRefUnsupported
+  case returnMissingPointer
+  case matchLimitUnsupported
+  case itemIllegalQuery
+  case waitForCallback
+  case missingEntitlement
+  case upgradePending
+  case mpSignatureInvalid
+  case otrTooOld
+  case otrIDTooNew
+  case serviceNotAvailable
+  case insufficientClientID
+  case deviceReset
+  case deviceFailed
+  case appleAddAppACLSubject
+  case applePublicKeyIncomplete
+  case appleSignatureMismatch
+  case appleInvalidKeyStartDate
+  case appleInvalidKeyEndDate
+  case conversionError
+  case appleSSLv2Rollback
+  case quotaExceeded
+  case fileTooBig
+  case invalidDatabaseBlob
+  case invalidKeyBlob
+  case incompatibleDatabaseBlob
+  case incompatibleKeyBlob
+  case hostNameMismatch
+  case unknownCriticalExtensionFlag
+  case noBasicConstraints
+  case noBasicConstraintsCA
+  case invalidAuthorityKeyID
+  case invalidSubjectKeyID
+  case invalidKeyUsageForPolicy
+  case invalidExtendedKeyUsage
+  case invalidIDLinkage
+  case pathLengthConstraintExceeded
+  case invalidRoot
+  case crlExpired
+  case crlNotValidYet
+  case crlNotFound
+  case crlServerDown
+  case crlBadURI
+  case unknownCertExtension
+  case unknownCRLExtension
+  case crlNotTrusted
+  case crlPolicyFailed
+  case idpFailure
+  case smimeEmailAddressesNotFound
+  case smimeBadExtendedKeyUsage
+  case smimeBadKeyUsage
+  case smimeKeyUsageNotCritical
+  case smimeNoEmailAddress
+  case smimeSubjAltNameNotCritical
+  case sslBadExtendedKeyUsage
+  case ocspBadResponse
+  case ocspBadRequest
+  case ocspUnavailable
+  case ocspStatusUnrecognized
+  case endOfData
+  case incompleteCertRevocationCheck
+  case networkFailure
+  case ocspNotTrustedToAnchor
+  case recordModified
+  case ocspSignatureError
+  case ocspNoSigner
+  case ocspResponderMalformedReq
+  case ocspResponderInternalError
+  case ocspResponderTryLater
+  case ocspResponderSignatureRequired
+  case ocspResponderUnauthorized
+  case ocspResponseNonceMismatch
+  case codeSigningBadCertChainLength
+  case codeSigningNoBasicConstraints
+  case codeSigningBadPathLengthConstraint
+  case codeSigningNoExtendedKeyUsage
+  case codeSigningDevelopment
+  case resourceSignBadCertChainLength
+  case resourceSignBadExtKeyUsage
+  case trustSettingDeny
+  case invalidSubjectName
+  case unknownQualifiedCertStatement
+  case mobileMeRequestQueued
+  case mobileMeRequestRedirected
+  case mobileMeServerError
+  case mobileMeServerNotAvailable
+  case mobileMeServerAlreadyExists
+  case mobileMeServerServiceErr
+  case mobileMeRequestAlreadyPending
+  case mobileMeNoRequestPending
+  case mobileMeCSRVerifyFailure
+  case mobileMeFailedConsistencyCheck
+  case notInitialized
+  case invalidHandleUsage
+  case pvcReferentNotFound
+  case functionIntegrityFail
+  case internalError
+  case memoryError
+  case invalidData
+  case mdsError
+  case invalidPointer
+  case selfCheckFailed
+  case functionFailed
+  case moduleManifestVerifyFailed
+  case invalidGUID
+  case invalidHandle
+  case invalidDBList
+  case invalidPassthroughID
+  case invalidNetworkAddress
+  case crlAlreadySigned
+  case invalidNumberOfFields
+  case verificationFailure
+  case unknownTag
+  case invalidSignature
+  case invalidName
+  case invalidCertificateRef
+  case invalidCertificateGroup
+  case tagNotFound
+  case invalidQuery
+  case invalidValue
+  case callbackFailed
+  case aclDeleteFailed
+  case aclReplaceFailed
+  case aclAddFailed
+  case aclChangeFailed
+  case invalidAccessCredentials
+  case invalidRecord
+  case invalidACL
+  case invalidSampleValue
+  case incompatibleVersion
+  case privilegeNotGranted
+  case invalidScope
+  case pvcAlreadyConfigured
+  case invalidPVC
+  case emmLoadFailed
+  case emmUnloadFailed
+  case addinLoadFailed
+  case invalidKeyRef
+  case invalidKeyHierarchy
+  case addinUnloadFailed
+  case libraryReferenceNotFound
+  case invalidAddinFunctionTable
+  case invalidServiceMask
+  case moduleNotLoaded
+  case invalidSubServiceID
+  case attributeNotInContext
+  case moduleManagerInitializeFailed
+  case moduleManagerNotFound
+  case eventNotificationCallbackNotFound
+  case inputLengthError
+  case outputLengthError
+  case privilegeNotSupported
+  case deviceError
+  case attachHandleBusy
+  case notLoggedIn
+  case algorithmMismatch
+  case keyUsageIncorrect
+  case keyBlobTypeIncorrect
+  case keyHeaderInconsistent
+  case unsupportedKeyFormat
+  case unsupportedKeySize
+  case invalidKeyUsageMask
+  case unsupportedKeyUsageMask
+  case invalidKeyAttributeMask
+  case unsupportedKeyAttributeMask
+  case invalidKeyLabel
+  case unsupportedKeyLabel
+  case invalidKeyFormat
+  case unsupportedVectorOfBuffers
+  case invalidInputVector
+  case invalidOutputVector
+  case invalidContext
+  case invalidAlgorithm
+  case invalidAttributeKey
+  case missingAttributeKey
+  case invalidAttributeInitVector
+  case missingAttributeInitVector
+  case invalidAttributeSalt
+  case missingAttributeSalt
+  case invalidAttributePadding
+  case missingAttributePadding
+  case invalidAttributeRandom
+  case missingAttributeRandom
+  case invalidAttributeSeed
+  case missingAttributeSeed
+  case invalidAttributePassphrase
+  case missingAttributePassphrase
+  case invalidAttributeKeyLength
+  case missingAttributeKeyLength
+  case invalidAttributeBlockSize
+  case missingAttributeBlockSize
+  case invalidAttributeOutputSize
+  case missingAttributeOutputSize
+  case invalidAttributeRounds
+  case missingAttributeRounds
+  case invalidAlgorithmParms
+  case missingAlgorithmParms
+  case invalidAttributeLabel
+  case missingAttributeLabel
+  case invalidAttributeKeyType
+  case missingAttributeKeyType
+  case invalidAttributeMode
+  case missingAttributeMode
+  case invalidAttributeEffectiveBits
+  case missingAttributeEffectiveBits
+  case invalidAttributeStartDate
+  case missingAttributeStartDate
+  case invalidAttributeEndDate
+  case missingAttributeEndDate
+  case invalidAttributeVersion
+  case missingAttributeVersion
+  case invalidAttributePrime
+  case missingAttributePrime
+  case invalidAttributeBase
+  case missingAttributeBase
+  case invalidAttributeSubprime
+  case missingAttributeSubprime
+  case invalidAttributeIterationCount
+  case missingAttributeIterationCount
+  case invalidAttributeDLDBHandle
+  case missingAttributeDLDBHandle
+  case invalidAttributeAccessCredentials
+  case missingAttributeAccessCredentials
+  case invalidAttributePublicKeyFormat
+  case missingAttributePublicKeyFormat
+  case invalidAttributePrivateKeyFormat
+  case missingAttributePrivateKeyFormat
+  case invalidAttributeSymmetricKeyFormat
+  case missingAttributeSymmetricKeyFormat
+  case invalidAttributeWrappedKeyFormat
+  case missingAttributeWrappedKeyFormat
+  case stagedOperationInProgress
+  case stagedOperationNotStarted
+  case verifyFailed
+  case querySizeUnknown
+  case blockSizeMismatch
+  case publicKeyInconsistent
+  case deviceVerifyFailed
+  case invalidLoginName
+  case alreadyLoggedIn
+  case invalidDigestAlgorithm
+  case invalidCRLGroup
+  case certificateCannotOperate
+  case certificateExpired
+  case certificateNotValidYet
+  case certificateRevoked
+  case certificateSuspended
+  case insufficientCredentials
+  case invalidAction
+  case invalidAuthority
+  case verifyActionFailed
+  case invalidCertAuthority
+  case invaldCRLAuthority
+  case invalidCRLEncoding
+  case invalidCRLType
+  case invalidCRL
+  case invalidFormType
+  case invalidID
+  case invalidIdentifier
+  case invalidIndex
+  case invalidPolicyIdentifiers
+  case invalidTimeString
+  case invalidReason
+  case invalidRequestInputs
+  case invalidResponseVector
+  case invalidStopOnPolicy
+  case invalidTuple
+  case multipleValuesUnsupported
+  case notTrusted
+  case noDefaultAuthority
+  case rejectedForm
+  case requestLost
+  case requestRejected
+  case unsupportedAddressType
+  case unsupportedService
+  case invalidTupleGroup
+  case invalidBaseACLs
+  case invalidTupleCredendtials
+  case invalidEncoding
+  case invalidValidityPeriod
+  case invalidRequestor
+  case requestDescriptor
+  case invalidBundleInfo
+  case invalidCRLIndex
+  case noFieldValues
+  case unsupportedFieldFormat
+  case unsupportedIndexInfo
+  case unsupportedLocality
+  case unsupportedNumAttributes
+  case unsupportedNumIndexes
+  case unsupportedNumRecordTypes
+  case fieldSpecifiedMultiple
+  case incompatibleFieldFormat
+  case invalidParsingModule
+  case databaseLocked
+  case datastoreIsOpen
+  case missingValue
+  case unsupportedQueryLimits
+  case unsupportedNumSelectionPreds
+  case unsupportedOperator
+  case invalidDBLocation
+  case invalidAccessRequest
+  case invalidIndexInfo
+  case invalidNewOwner
+  case invalidModifyMode
+  case missingRequiredExtension
+  case extendedKeyUsageNotCritical
+  case timestampMissing
+  case timestampInvalid
+  case timestampNotTrusted
+  case timestampServiceNotAvailable
+  case timestampBadAlg
+  case timestampBadRequest
+  case timestampBadDataFormat
+  case timestampTimeNotAvailable
+  case timestampUnacceptedPolicy
+  case timestampUnacceptedExtension
+  case timestampAddInfoNotAvailable
+  case timestampSystemFailure
+  case signingTimeMissing
+  case timestampRejection
+  case timestampWaiting
+  case timestampRevocationWarning
+  case timestampRevocationNotification
+  case unexpectedError
+}
+extension Ringer_Interactive.Status : Swift.RawRepresentable, Swift.CustomStringConvertible {
+  public init(status: Darwin.OSStatus)
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Darwin.OSStatus)
+  public typealias RawValue = Darwin.OSStatus
+  public var rawValue: Darwin.OSStatus {
+    get
+  }
+}
+extension Ringer_Interactive.Status : Foundation.CustomNSError {
+  public static let errorDomain: Swift.String
+  public var errorCode: Swift.Int {
+    get
+  }
+  public var errorUserInfo: [Swift.String : Any] {
+    get
+  }
+}
+public class ContactSave {
+  public init()
+  public func requestAccess()
+  @objc deinit
+}
+public protocol ringerInteractiveDelegate {
+  func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, willPresent notification: UserNotifications.UNNotification)
+  func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse)
+  func application(_ application: UIKit.UIApplication, didReceiveRemoteNotification userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
+  func tokenGenerate(token: Swift.String)
+  func completionFinishTask()
+}
+public class RingerInteractiveNotification {
+  public static var ringerInteractiveDelegate: (any Ringer_Interactive.ringerInteractiveDelegate)?
+  public var completionFinishTask: (() -> ())?
+  public init()
+  @objc deinit
+}
+extension Ringer_Interactive.RingerInteractiveNotification {
+  public func notificationRegister()
+  public func setFireBaseToken(fcmToken: Swift.String)
+}
+extension Ringer_Interactive.RingerInteractiveNotification {
+  public func ringerInteractiveLogin(auth: Swift.String, CompanyName companyName: Swift.String? = "", MobileNumber mobileNumber: Swift.String? = "")
+  public func ringerInteractiveSearchMobileRegister(auth: Swift.String, completion: @escaping (_ mobileRegisterID: Swift.String, _ status: Swift.Int) -> Swift.Void)
+  public func ringerInteractiveDeleteMobileRegister(auth: Swift.String, mobileregistrationId: Swift.String, completion: @escaping (_ status: Swift.Int) -> Swift.Void)
+  public func ringerInteractiveGetContact()
+  public func saveAndUpdateContact(index: Swift.Int)
+}
+@_hasMissingDesignatedInitializers open class YiUUID {
+  open class func uuid() -> Swift.String
+  open class func uuidForKey(_ key: Swift.String) -> Swift.String
+  open class func uuidForSession() -> Swift.String
+  open class func uuidForInstallation() -> Swift.String
+  open class func uuidForVendor() -> Swift.String
+  open class func uuidForDevice() -> Swift.String
+  open func uuid() -> Swift.String
+  open func uuidForKey(_ key: Swift.String) -> Swift.String
+  open func uuidForSession() -> Swift.String
+  open func uuidForInstallation() -> Swift.String
+  open func uuidForVendor() -> Swift.String
+  open func uuidForDevice() -> Swift.String
+  open func uuidForDevice_updateWithValue(_ value: Swift.String)
+  open func _getOrCreateValueForKey(_ key: Swift.String, defaultValue: Swift.String?, userDefaults: Swift.Bool, keychain: Swift.Bool, service: Swift.String?, accessGroup: Swift.String?) -> Swift.String
+  open func _getValueForKey(_ key: Swift.String, userDefaults: Swift.Bool, keychain: Swift.Bool, service: Swift.String?, accessGroup: Swift.String?) -> Swift.String
+  open func _setValue(_ value: Swift.String, key: Swift.String, userDefaults: Swift.Bool, keychain: Swift.Bool, service: Swift.String?, accessGroup: Swift.String?)
+  open func defaultService() -> Swift.String
+  @objc deinit
+}
+extension Ringer_Interactive.ItemClass : Swift.Equatable {}
+extension Ringer_Interactive.ItemClass : Swift.Hashable {}
+extension Ringer_Interactive.ProtocolType : Swift.Equatable {}
+extension Ringer_Interactive.ProtocolType : Swift.Hashable {}
+extension Ringer_Interactive.AuthenticationType : Swift.Equatable {}
+extension Ringer_Interactive.AuthenticationType : Swift.Hashable {}
+extension Ringer_Interactive.Accessibility : Swift.Equatable {}
+extension Ringer_Interactive.Accessibility : Swift.Hashable {}
+extension Ringer_Interactive.AuthenticationUI : Swift.Equatable {}
+extension Ringer_Interactive.AuthenticationUI : Swift.Hashable {}
+extension Ringer_Interactive.Status : Swift.Equatable {}
+extension Ringer_Interactive.Status : Swift.Hashable {}
