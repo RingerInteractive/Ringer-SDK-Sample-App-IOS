@@ -7,7 +7,7 @@ import FirebaseMessaging
 import Contacts
 import ContactsUI
 
-class HomeVC: BaseViewController, ringerInteractiveDelegate, DrawerControllerDelegate {
+class HomeVC: BaseViewController, DrawerControllerDelegate {
     
     @IBOutlet weak var imgLogo: UIImageView!
     @IBOutlet weak var usContact: UISwitch!
@@ -18,7 +18,6 @@ class HomeVC: BaseViewController, ringerInteractiveDelegate, DrawerControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         temp = (UIApplication.shared.delegate as? AppDelegate)?.temp
         temp?.notificationRegister()
         Messaging.messaging().token { [weak self] token, error in
@@ -27,52 +26,11 @@ class HomeVC: BaseViewController, ringerInteractiveDelegate, DrawerControllerDel
                 print(error)
             } else if let token = token {
                 strongSelf.temp?.setFireBaseToken(fcmToken: token)
-                strongSelf.temp?.ringerInteractiveLogin(auth: "dGltQGJhc2Fsc21hcnRzb2x1dGlvbnMuY29tOlJpbmdjIyMxMjM0")
             }
         }
-        RingerInteractiveNotification.ringerInteractiveDelegate = self
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped(_:)))
-        tapGestureRecognizer.numberOfTapsRequired = 7
-        imgLogo.addGestureRecognizer(tapGestureRecognizer)
-        
     }
     
-    @objc func imageViewTapped(_ recognizer: UITapGestureRecognizer) {
-        guard let keyAndUrl = self.temp?.getKeyAndUrl() else {return}
-        let alertController = UIAlertController(title: "Custom Alert", message: nil, preferredStyle: .alert)
 
-                // Add text fields
-                alertController.addTextField { textField in
-                    textField.placeholder = "Api Key"
-                    textField.text = keyAndUrl.key
-                }
-                
-                alertController.addTextField { textField in
-                    textField.placeholder = "Url"
-                    textField.text = keyAndUrl.url
-                }
-
-                // Add buttons
-                alertController.addAction(UIAlertAction(title: "Use Prod Setting", style: .default, handler: { _ in
-                    self.temp?.setKeyAndUrl(key: GlobalFunction.keyProd, url: GlobalFunction.urlProd)
-                }))
-                
-                alertController.addAction(UIAlertAction(title: "Use Dev Setting", style: .default, handler: { _ in
-                    self.temp?.setKeyAndUrl(key: GlobalFunction.keyDev, url: GlobalFunction.urlDev)
-                }))
-
-                alertController.addAction(UIAlertAction(title: "Change", style: .default, handler: { _ in
-                    let apiKey = alertController.textFields?.first?.text ?? ""
-                    let url = alertController.textFields?.last?.text ?? ""
-                    self.temp?.setKeyAndUrl(key: apiKey, url: url)
-                }))
-
-                alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
-                    alertController.dismiss(animated: true)
-                }))
-
-                present(alertController, animated: true, completion: nil)
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -219,29 +177,4 @@ class HomeVC: BaseViewController, ringerInteractiveDelegate, DrawerControllerDel
         self.navigationController?.present(alert, animated: true, completion: nil)
     }
     
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) {
-//        temp.ringerInteractiveGetContact()
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) {
-//        temp.ringerInteractiveGetContact()
-    }
-    
-    func application(_ application: UIApplication,
-                     didReceiveRemoteNotification userInfo: [AnyHashable : Any],
-                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-//        temp.ringerInteractiveGetContact()
-//        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 30.0) {
-//            completionHandler(.newData)
-//        }
-    }
-    
-    func tokenGenerate(token: String) {
-//        print("token is \(token)")
-//        RingerInteractiveNotification.ringerInteractiveDelegate = self
-//        self.temp.ringerInteractiveLogin(username: "tim@basalsmartsolutions.com", password: "Ringc##1234")
-    }
-    
-    func completionFinishTask() {
-    }
 }

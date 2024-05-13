@@ -1,12 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
-// swift-module-flags: -target arm64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Ringer_Interactive
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios14.0-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Ringer_Interactive
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AdSupport
 import Contacts
 import ContactsUI
-import FirebaseAuth
-import FirebaseMessaging
 import Foundation
 import LocalAuthentication
 @_exported import Ringer_Interactive
@@ -15,6 +13,7 @@ import Swift
 import UIKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public struct RingerInteractive {
   public var text: Swift.String {
     get
@@ -823,7 +822,6 @@ public class RingerInteractiveNotification {
 extension Ringer_Interactive.RingerInteractiveNotification {
   public func notificationRegister()
   public func setFireBaseToken(fcmToken: Swift.String)
-  public func completeContactTask()
 }
 extension Ringer_Interactive.RingerInteractiveNotification {
   public func ringerInteractiveLogin(auth: Swift.String, CompanyName companyName: Swift.String? = "", MobileNumber mobileNumber: Swift.String? = "")

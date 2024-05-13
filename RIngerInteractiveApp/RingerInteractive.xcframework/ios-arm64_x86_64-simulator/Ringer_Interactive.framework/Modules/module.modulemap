@@ -1,7 +1,7 @@
 framework module Ringer_Interactive {
   umbrella header "Ringer_Interactive.h"
-
   export *
+
   module * { export * }
 }
 

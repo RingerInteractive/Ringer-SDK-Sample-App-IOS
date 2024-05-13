@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wM4-hH-g5f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wM4-hH-g5f">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -353,8 +353,8 @@ There are many variations of passages of Lorem Ipsum available, but the majority
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLI-wr-7qi">
                                 <rect key="frame" x="20" y="582" width="335" height="65"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright 2023 Flash App, LLC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37Z-sP-y7F">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37Z-sP-y7F" customClass="CustomLabel" customModule="RIngerInteractiveApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="15" width="335" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Nexa-Light" family="Nexa-Light" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -648,8 +648,8 @@ There are many variations of passages of Lorem Ipsum available, but the majority
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="he8-gR-0Tq">
                                 <rect key="frame" x="20" y="592" width="335" height="65"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright 2023 Flash App, LLC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kz5-lj-KfS">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kz5-lj-KfS" customClass="CustomLabel" customModule="RIngerInteractiveApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="15" width="335" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Nexa-Light" family="Nexa-Light" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -867,7 +867,7 @@ There are many variations of passages of Lorem Ipsum available, but the majority
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8j1-d1-zr1">
                                                 <rect key="frame" x="20" y="639" width="335" height="65"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright 2023 Flash App, LLC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCu-WW-k2f">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright 2023 Flash App, LLC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCu-WW-k2f" customClass="CustomLabel" customModule="RIngerInteractiveApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="15"/>
                                                         <fontDescription key="fontDescription" name="Nexa-Light" family="Nexa-Light" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1175,8 +1175,8 @@ There are many variations of passages of Lorem Ipsum available, but the majority
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uc-Vb-jV9">
                                 <rect key="frame" x="20" y="582" width="335" height="65"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright 2023 Flash App, LLC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2Q-hs-OHP">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2Q-hs-OHP" customClass="CustomLabel" customModule="RIngerInteractiveApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="15" width="335" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Nexa-Light" family="Nexa-Light" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
