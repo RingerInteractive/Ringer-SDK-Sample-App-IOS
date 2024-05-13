@@ -7,7 +7,7 @@ Ringer is a swift package that allows the mobile app to save and update contacts
 
 ## Precondition 
 
-##### 1. iOS version above 11 is required to use this sdk.
+##### 1. iOS version 14 is required to use this sdk.
 
 
 
