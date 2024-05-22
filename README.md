@@ -13,7 +13,7 @@ Ringer is a swift package that allows the mobile app to save and update contacts
 
 ## How to integrate SDK in your application
 ### Step 1
-Please visit the [Releases](https://github.com/RingerInteractive/Ringer-Interactive-iOS-SDK) to get latest package.
+Please visit the [Releases](https://github.com/RingerInteractive/Ringer-IOS-SDK) to get latest package.
 Add the package using swift package manager in to your project.
 
 ### Step 2
