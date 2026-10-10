@@ -1,0 +1,226 @@
+# .github/workflows/deploy-app-store.yml
+#
+# Workflow: Build app RIngerInteractiveApp và upload lên App Store Connect.
+# Cách dùng: vào tab Actions của repo -> chọn "Deploy to App Store Connect"
+#            -> bấm "Run workflow" -> chọn TestFlight hoặc App Store.
+#
+# Đặt file này tại: .github/workflows/deploy-app-store.yml (trong repo)
+#
+# ============ SECRETS CẦN TẠO (repo Settings -> Secrets and variables -> Actions) ============
+#
+# 1) APP_STORE_CERT_P12_BASE64
+#    - Certificate "Apple Distribution" xuất từ Keychain Access (chuột phải -> Export
+#      -> định dạng .p12), rồi encode base64:
+#        base64 -i Certificate.p12 | pbcopy
+#
+# 2) APP_STORE_CERT_PASSWORD
+#    - Mật khẩu bạn đặt lúc export file .p12 ở trên.
+#
+# 3) APP_STORE_PROFILE_BASE64
+#    - File provisioning profile loại "App Store" (Distribution) cho bundle id
+#      com.ios.ringerinteractive, đã bật capability Push Notifications
+#      (app có dùng FirebaseMessaging). Tải từ developer.apple.com -> Certificates,
+#      Identifiers & Profiles -> Profiles, rồi encode base64:
+#        base64 -i Ringer_AppStore.mobileprovision | pbcopy
+#    - Workflow tự đọc tên profile trong file nên không cần đặt tên khớp với project.
+#
+# 4) ASC_API_KEY_ID
+#    - Key ID của App Store Connect API Key (vd: D383SF739).
+#
+# 5) ASC_API_ISSUER_ID
+#    - Issuer ID của App Store Connect API Key (dạng UUID).
+#
+# 6) ASC_API_KEY_P8_BASE64
+#    - File .p8 private key của App Store Connect API Key, encode base64:
+#        base64 -i AuthKey_D383SF739.p8 | pbcopy
+#    - Tạo key tại: App Store Connect -> Users and Access -> Integrations -> App Store
+#      Connect API -> Team Keys. Role cần: App Manager trở lên.
+#
+# =============================================================================================
+
+name: Deploy to App Store Connect
+
+on:
+  workflow_dispatch:
+    inputs:
+      destination:
+        description: "App Store connect upload action"
+        type: choice
+        required: true
+        default: "TestFlight"
+        options:
+          - TestFlight
+          - App Store
+      bump_build_number:
+        description: "Tự động tăng Build number (+1)"
+        type: boolean
+        default: true
+
+env:
+  SCHEME: RIngerInteractiveApp
+  WORKSPACE: RIngerInteractiveApp.xcworkspace
+  BUNDLE_ID: com.ios.ringerinteractive
+  TEAM_ID: QW59CJL5KR
+  INFO_PLIST_PATH: RIngerInteractiveApp/Info.plist
+
+jobs:
+  build-and-upload:
+    name: Build & upload to App Store Connect
+    runs-on: macos-15
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Select latest Xcode
+        run: |
+          XCODE_APP=$(ls -d /Applications/Xcode*.app | sort -V | tail -1)
+          echo "Using Xcode: $XCODE_APP"
+          sudo xcode-select -s "$XCODE_APP"
+          xcodebuild -version
+
+      - name: Install CocoaPods dependencies
+        run: pod install
+
+      - name: Bump build number
+        if: ${{ inputs.bump_build_number }}
+        run: |
+          CURRENT=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "$INFO_PLIST_PATH")
+          NEW=$((CURRENT + 1))
+          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $NEW" "$INFO_PLIST_PATH"
+          echo "Build number: $CURRENT -> $NEW"
+
+      - name: Set up code signing
+        env:
+          CERT_P12_BASE64: ${{ secrets.APP_STORE_CERT_P12_BASE64 }}
+          CERT_PASSWORD: ${{ secrets.APP_STORE_CERT_PASSWORD }}
+          PROFILE_BASE64: ${{ secrets.APP_STORE_PROFILE_BASE64 }}
+        run: |
+          set -euo pipefail
+
+          # Keychain tạm, chỉ sống trong job này
+          KEYCHAIN_PATH="$RUNNER_TEMP/build.keychain-db"
+          KEYCHAIN_PASSWORD="$(openssl rand -base64 16)"
+          echo "KEYCHAIN_PATH=$KEYCHAIN_PATH" >> "$GITHUB_ENV"
+          echo "KEYCHAIN_PASSWORD=$KEYCHAIN_PASSWORD" >> "$GITHUB_ENV"
+
+          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+
+          # Import Apple Distribution certificate (.p12)
+          echo "$CERT_P12_BASE64" | base64 --decode > "$RUNNER_TEMP/cert.p12"
+          security import "$RUNNER_TEMP/cert.p12" \
+            -P "$CERT_PASSWORD" -A -t cert -f pkcs12 -k "$KEYCHAIN_PATH"
+          security list-keychains -d user -s "$KEYCHAIN_PATH" \
+            $(security list-keychains -d user | tr -d '"')
+          security set-key-partition-list -S apple-tool:,apple:,codesign: \
+            -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+
+          # Cài provisioning profile, tự đọc tên thật trong file
+          PP_DIR="$HOME/Library/MobileDevice/Provisioning Profiles"
+          mkdir -p "$PP_DIR"
+          echo "$PROFILE_BASE64" | base64 --decode > "$RUNNER_TEMP/profile.mobileprovision"
+          PROFILE_NAME="$(security cms -D -i "$RUNNER_TEMP/profile.mobileprovision" | plutil -extract Name raw -)"
+          PROFILE_UUID="$(security cms -D -i "$RUNNER_TEMP/profile.mobileprovision" | plutil -extract UUID raw -)"
+          cp "$RUNNER_TEMP/profile.mobileprovision" "$PP_DIR/$PROFILE_UUID.mobileprovision"
+          echo "PROFILE_NAME=$PROFILE_NAME" >> "$GITHUB_ENV"
+          echo "Using provisioning profile: $PROFILE_NAME ($PROFILE_UUID)"
+
+      - name: Archive app
+        run: |
+          set -euo pipefail
+          xcodebuild archive \
+            -workspace "$WORKSPACE" \
+            -scheme "$SCHEME" \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath "$RUNNER_TEMP/App.xcarchive" \
+            CODE_SIGN_STYLE=Manual \
+            DEVELOPMENT_TEAM="$TEAM_ID" \
+            CODE_SIGN_IDENTITY="Apple Distribution" \
+            PROVISIONING_PROFILE_SPECIFIER="$PROFILE_NAME" \
+            clean archive
+
+      - name: Export IPA (App Store)
+        run: |
+          set -euo pipefail
+          cat > "$RUNNER_TEMP/ExportOptions.plist" <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key>
+            <string>app-store</string>
+            <key>teamID</key>
+            <string>$TEAM_ID</string>
+            <key>signingStyle</key>
+            <string>manual</string>
+            <key>provisioningProfiles</key>
+            <dict>
+              <key>$BUNDLE_ID</key>
+              <string>$PROFILE_NAME</string>
+            </dict>
+            <key>stripSwiftSymbols</key>
+            <true/>
+            <key>uploadSymbols</key>
+            <true/>
+          </dict>
+          </plist>
+          EOF
+          xcodebuild -exportArchive \
+            -archivePath "$RUNNER_TEMP/App.xcarchive" \
+            -exportPath "$RUNNER_TEMP/export" \
+            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist"
+          IPA_PATH="$(ls "$RUNNER_TEMP/export"/*.ipa | head -1)"
+          echo "IPA_PATH=$IPA_PATH" >> "$GITHUB_ENV"
+          echo "IPA built: $IPA_PATH"
+
+      - name: Install fastlane
+        run: gem install fastlane -N
+
+      - name: Upload to App Store Connect
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_API_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_API_ISSUER_ID }}
+          ASC_P8_BASE64: ${{ secrets.ASC_API_KEY_P8_BASE64 }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PYEOF'
+          import json, base64, os
+          key = base64.b64decode(os.environ["ASC_P8_BASE64"]).decode()
+          payload = {
+              "key_id": os.environ["ASC_KEY_ID"],
+              "issuer_id": os.environ["ASC_ISSUER_ID"],
+              "key": key,
+              "duration": 1200,
+              "in_house": False,
+          }
+          with open(os.environ["RUNNER_TEMP"] + "/asc_api_key.json", "w") as f:
+              json.dump(payload, f)
+          PYEOF
+
+          if [ "${{ inputs.destination }}" = "App Store" ]; then
+            echo "Uploading to App Store Connect (chưa submit review)..."
+            fastlane run deliver \
+              ipa:"$IPA_PATH" \
+              api_key_path:"$RUNNER_TEMP/asc_api_key.json" \
+              skip_metadata:true \
+              skip_screenshots:true \
+              submit_for_review:false \
+              force:true \
+              precheck_include_in_app_purchases:false
+          else
+            echo "Uploading to TestFlight..."
+            fastlane run pilot \
+              ipa:"$IPA_PATH" \
+              api_key_path:"$RUNNER_TEMP/asc_api_key.json" \
+              skip_waiting_for_build_processing:true \
+              distribute_external:false
+          fi
+
+      - name: Clean up keychain
+        if: always()
+        run: |
+          security delete-keychain "$KEYCHAIN_PATH" || true
